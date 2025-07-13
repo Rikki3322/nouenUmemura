@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import 'swiper/css';
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* writing-mode などはクラスで定義する */
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.text-orientation-mixed {
+  text-orientation: mixed;
+}

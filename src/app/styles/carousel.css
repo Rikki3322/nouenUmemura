@@ -1,0 +1,16 @@
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-${imageWidth * images.length}px);
+  }
+}
+
+.scroll-infinity-list {
+  animation: scrollInfinite 60s linear infinite;
+}
+
+.group:hover .scroll-infinity-list {
+  animation-play-state: paused;
+}

@@ -1,0 +1,51 @@
+{
+  "name": "next-umemura",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 edge versions"
+  ],
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "framer-motion": "^12.23.0",
+    "lucide-react": "^0.516.0",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.60.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-simple-typewriter": "^5.0.1",
+    "swiper": "^11.2.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.30.0",
+    "@netlify/next": "^1.4.9",
+    "@next/bundle-analyzer": "^15.3.5",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.30.0",
+    "eslint-config-next": "15.3.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5",
+    "typescript-eslint": "^8.35.1"
+  }
+}

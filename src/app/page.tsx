@@ -1,0 +1,74 @@
+'use client';
+
+import { getCurrentSeasonalContent } from '@/utils/season-detector';
+import { seasonalContents } from '@/data/seasonal-contents';
+import React from 'react';
+import CTAbutton from '../components/sections/CTAbutton';
+import Header from '../components/layout/Header';
+import HeroSection from '../components/sections/HeroSection';
+import UrgencySection from '../components/sections/UrgencySection';
+import ProblemSection from '../components/sections/ProblemSection';
+import SolutionSection from '../components/sections/SolutionSection';
+import ValueProofSection from '../components/sections/ValueProofSection';
+import EmotionalValueSection from '../components/sections/EmotionalValueSection';
+import RiskReductionSection from '../components/sections/RiskReductionSection';
+import PriceJustificationSection from '../components/sections/PriceJustificationSection';
+import ActionSection from '../components/sections/ActionSection/ActionSection';
+import FinalPushSection from '../components/sections/FinalPushSection';
+import FAQSection from '../components/sections/FAQSection';
+import Footer from '../components/layout/Footer';
+
+const HomePage = () => {
+  const seasonStatus = getCurrentSeasonalContent();
+
+  // 季節情報が見つからない場合のフェールセーフ
+  if (!seasonStatus) {
+    return (
+      <div className="p-8 text-center text-red-600">
+        現在の季節情報が取得できませんでした。
+      </div>
+    );
+  }
+
+  // seasonStatusから必要な情報を取得
+  const { season, phase } = seasonStatus;
+
+  // 現在の季節に対応するコンテンツを取得
+  const seasonal = seasonalContents.find(
+    (content) => content.season === season && content.phase === phase
+  );
+
+  // 季節コンテンツが見つからない場合のフェールセーフ
+  if (!seasonal) {
+    return (
+      <div className="p-8 text-center text-red-600">
+        現在の季節に対応するコンテンツが見つかりませんでした。
+      </div>
+    );
+  }
+
+  const seasonType = { season, phase };
+
+  return (
+    <div>
+      <Header />
+      <main>
+        <CTAbutton />
+        <HeroSection />
+        <UrgencySection seasonType={seasonType} seasonal={seasonal} />
+        <ProblemSection />
+        <SolutionSection />
+        <ValueProofSection />
+        <EmotionalValueSection />
+        <RiskReductionSection />
+        <PriceJustificationSection />
+        <ActionSection seasonType={seasonType} seasonal={seasonal} />
+        <FinalPushSection seasonType={seasonType} seasonal={seasonal} />
+        <FAQSection />
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default HomePage;
