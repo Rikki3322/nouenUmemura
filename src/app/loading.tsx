@@ -8,13 +8,13 @@ export default function Loading() {
         .loader,
         .loader:before,
         .loader:after {
-          background: #000;
+          background: #16a34a; /* green-600 */
           animation: load1 1s infinite ease-in-out;
           width: 1em;
           height: 4em;
         }
         .loader {
-          color: #000;
+          color: #16a34a; /* green-600 */
           text-indent: -9999em;
           margin: 88px auto;
           position: relative;
