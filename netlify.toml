@@ -4,3 +4,9 @@
 
 [[plugins]]
    package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Basic-Auth = "guest nouensaga"
+    Status = "401"
