@@ -3,7 +3,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
-import pluginTailwindcss from 'eslint-plugin-tailwindcss';
+
 import pluginImport from 'eslint-plugin-import';
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import { defineConfig } from 'eslint/config';
@@ -28,16 +28,13 @@ export default defineConfig([
     plugins: {
       js,
       react: pluginReact,
-      tailwindcss: pluginTailwindcss,
+
       import: pluginImport,
       'simple-import-sort': pluginSimpleImportSort,
     },
     rules: {
       // React 17+ では React のインポート不要なので無効化
       'react/react-in-jsx-scope': 'off',
-
-      // Tailwind CSS クラスのカスタムチェック（必要に応じて変更）
-      'tailwindcss/no-custom-classname': 'off',
 
       // アロー関数を使うことを強制（コールバック関数）
       'prefer-arrow-callback': 'error',
