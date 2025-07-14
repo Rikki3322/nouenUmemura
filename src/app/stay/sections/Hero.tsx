@@ -9,10 +9,11 @@ const HeroSection = () => {
         {/* 左側：画像（2/3幅） */}
         <div className="w-full md:w-1/2 h-[80vh] max-h-[600px] relative overflow-hidden">
           <Image
-            src="/assets/images/stay/hero2.png"
+            src="/assets/images/stay/hero2.webp"
             alt="ヒーロー背景"
-            fill
-            className="object-contain"
+            width={800}
+            height={600}
+            className="object-cover w-full h-full"
             priority
           />
         </div>

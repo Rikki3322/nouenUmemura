@@ -75,7 +75,7 @@ const ValueProofSection = () => {
                     {/* テキストレイヤー */}
                     <div
                       className="relative z-10 h-full flex flex-col justify-center p-4 items-center text-center"
-                      style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+                      style={{ textShadow: '2px 3px 5px rgba(0, 0, 0, 1)' }}
                     >
                       <div className="flex items-center gap-1 mb-2">
                         {[...Array(3)].map((_, i) => (
@@ -86,10 +86,8 @@ const ValueProofSection = () => {
                           />
                         ))}
                       </div>
-                      <p className="font-medium text-lg mb-2 text-[#e8f0ff]">
-                        {t.text}
-                      </p>
-                      <p className="text-sm text-teal-50">{t.source}</p>
+                      <p className="mb-2 text-gray-100">{t.text}</p>
+                      <p className="text-sm text-gray-100">{t.source}</p>
                     </div>
                   </div>
                 </FadeInOnScroll>

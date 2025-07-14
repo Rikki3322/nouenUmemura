@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.23.0",
     "lucide-react": "^0.516.0",
+    "netlify-identity-widget": "^1.9.2",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

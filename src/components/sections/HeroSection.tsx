@@ -43,9 +43,10 @@ const HeroSection = () => {
       <Image
         src="/assets/images/hero-poster.jpg"
         alt="アスパラガスの背景画像"
-        width={1920}
-        height={1080}
-        className="hidden" // preloadのみ目的
+        width={360}
+        height={640}
+        priority
+        className="block sm:hidden object-cover w-full h-full"
       />
 
       <div className="sm:h-screen flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -84,7 +85,10 @@ const HeroSection = () => {
               preload="auto"
               poster="/assets/images/hero-poster.jpg"
             >
-              <source src="/assets/videos/umemuranouen.mp4" type="video/mp4" />
+              <source
+                src="/assets/videos/umemuranouen_compressed.mp4"
+                type="video/mp4"
+              />
               <source src="/assets/videos/hero.webm" type="video/webm" />
             </video>
           ) : (
