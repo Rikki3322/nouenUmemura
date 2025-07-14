@@ -39,19 +39,8 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen bg-black overflow-hidden"
     >
-      {/* スマホ用画像は動画表示前だけ */}
-      {!showVideo && (
-        <Image
-          src="/assets/images/hero-poster.jpg"
-          alt="アスパラガスの背景画像"
-          width={360}
-          height={640}
-          priority
-          className="block sm:hidden object-cover w-full h-full"
-        />
-      )}
       <div className="sm:h-screen flex flex-col sm:flex-row items-center justify-center gap-6">
-        {/* Left Text */}
+        {/* Left Text (PC only) */}
         <div className="hidden sm:flex flex-1 justify-end pr-4">
           <div className="max-w-sm text-white text-right space-y-4">
             <FadeInOnScroll>
@@ -71,7 +60,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* 中央動画またはポスター */}
+        {/* 中央：動画 or 画像（画像はPCのみ動画ロードまで表示） */}
         <div
           ref={videoRef}
           className="w-full aspect-[9/16] sm:w-[360px] sm:aspect-[9/16] relative z-10"
@@ -93,17 +82,20 @@ const HeroSection = () => {
               <source src="/assets/videos/hero.webm" type="video/webm" />
             </video>
           ) : (
-            <Image
-              src="/assets/images/hero-poster.jpg"
-              alt="アスパラガスの動画"
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 360px"
-            />
+            // PCのみ画像表示（スマホは非表示）
+            <div className="hidden sm:block w-full h-full relative">
+              <Image
+                src="/assets/images/hero-poster.jpg"
+                alt="アスパラガスの動画ポスター"
+                fill
+                className="object-cover"
+                sizes="360px"
+              />
+            </div>
           )}
         </div>
 
-        {/* Right Text（sm以上）*/}
+        {/* Right Text（PC only） */}
         <div className="hidden sm:flex flex-1 justify-start pl-4">
           <div className="max-w-sm text-white flex flex-col gap-6">
             {/* Award Badge */}
@@ -116,7 +108,6 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3">
-              {/* 今すぐ味わうボタン */}
               <a
                 href="#action"
                 className="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition-all flex items-center justify-center space-x-2 min-h-[40px]"
@@ -124,7 +115,6 @@ const HeroSection = () => {
                 <ShoppingBasket size={16} />
                 <span>今すぐ味わう</span>
               </a>
-              {/* LINEで注文ボタン */}
               <a
                 href="https://line.me/R/ti/p/@890kprkl?oat_content=url"
                 target="_blank"
