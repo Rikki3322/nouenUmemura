@@ -39,16 +39,17 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen bg-black overflow-hidden"
     >
-      {/* LCP対象：先に表示する画像 */}
-      <Image
-        src="/assets/images/hero-poster.jpg"
-        alt="アスパラガスの背景画像"
-        width={360}
-        height={640}
-        priority
-        className="block sm:hidden object-cover w-full h-full"
-      />
-
+      {/* スマホ用画像は動画表示前だけ */}
+      {!showVideo && (
+        <Image
+          src="/assets/images/hero-poster.jpg"
+          alt="アスパラガスの背景画像"
+          width={360}
+          height={640}
+          priority
+          className="block sm:hidden object-cover w-full h-full"
+        />
+      )}
       <div className="sm:h-screen flex flex-col sm:flex-row items-center justify-center gap-6">
         {/* Left Text */}
         <div className="hidden sm:flex flex-1 justify-end pr-4">
