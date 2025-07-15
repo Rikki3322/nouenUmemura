@@ -35,7 +35,7 @@ const ValueProofSection = () => {
             </FadeInOnScroll>
           </div>
 
-          <div className="bg-yellow-50 rounded-xl p-6 mb-8">
+          <div className="bg-yellow-50 rounded p-6 mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Trophy className="text-yellow-600" size={24} />
               <h3 className="text-xl font-bold text-gray-900">権威ある実績</h3>
@@ -53,7 +53,7 @@ const ValueProofSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-6">
+          <div className="bg-gray-50 rounded p-6">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Star className="text-yellow-500" size={24} />
               <h3 className="text-xl font-bold text-gray-900">お客様の声</h3>
@@ -62,7 +62,7 @@ const ValueProofSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <FadeInOnScroll key={i}>
-                  <div className="relative h-64 rounded-xl overflow-hidden">
+                  <div className="relative h-64 rounded overflow-hidden">
                     {/* 背景画像 */}
                     <Image
                       src={t.image}

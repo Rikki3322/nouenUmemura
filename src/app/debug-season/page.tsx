@@ -1,14 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { SeasonType, SeasonConfigItem } from '@/data/season-config';
-import { seasonalContents, SeasonalContent } from '@/data/seasonal-contents';
+import { seasonConfig, SeasonConfigItem } from '@/data/season-config';
+import { seasonalContents_ja } from '@/data/seasonal-contents.ja';
+import type { SeasonalContent } from '@/data/seasonal-contents';
 import UrgencySection from '@/components/sections/UrgencySection';
-import FinalPushSection from '@/components/sections/FinalPushSection';
 import ActionSection from '@/components/sections/ActionSection/ActionSection';
-
-// 例：season-config の配列をインポートしてください
-import { seasonConfig } from '@/data/season-config';
+import FinalPushSection from '@/components/sections/FinalPushSection';
 
 const DebugSeasonPage = () => {
   const today = new Date();
@@ -16,16 +14,15 @@ const DebugSeasonPage = () => {
     today.getMonth() + 1
   );
 
-  // 月ごとの最大日数（今回は月だけ使うなら不要かも）
-  const getDaysInMonth = (month: number): number =>
-    new Date(2000, month, 0).getDate();
-
-  // 月からシーズン設定を探す
+  // 該当月の seasonConfig を取得
   const currentSeasonConfig: SeasonConfigItem | undefined = seasonConfig.find(
     (item) => item.month === simulatedMonth
   );
 
-  // シーズン設定があれば、seasonalContentsから該当するものを探す
+  // 日本語の seasonal contents を使用
+  const seasonalContents: SeasonalContent[] = seasonalContents_ja;
+
+  // 該当する SeasonalContent を取得
   const currentSeasonalContent: SeasonalContent | undefined =
     currentSeasonConfig
       ? seasonalContents.find(
@@ -33,13 +30,13 @@ const DebugSeasonPage = () => {
             content.season === currentSeasonConfig.season &&
             content.phase === currentSeasonConfig.phase
         )
-      : undefined;
+      : seasonalContents.find((content) => content.season === 'off'); // フォールバックとして off を表示
 
   return (
     <div className="p-6 space-y-6">
       <h1 className="text-2xl font-bold">🌿 季節シミュレーター</h1>
 
-      {/* 月セレクトのみ */}
+      {/* 月セレクト */}
       <div className="flex items-center gap-4">
         <label htmlFor="month" className="font-medium">
           表示したい月：
@@ -70,22 +67,22 @@ const DebugSeasonPage = () => {
           </h2>
           <UrgencySection
             seasonType={{
-              season: currentSeasonConfig!.season,
-              phase: currentSeasonConfig!.phase,
+              season: currentSeasonalContent.season,
+              phase: currentSeasonalContent.phase,
             }}
             seasonal={currentSeasonalContent}
           />
           <ActionSection
             seasonType={{
-              season: currentSeasonConfig!.season,
-              phase: currentSeasonConfig!.phase,
+              season: currentSeasonalContent.season,
+              phase: currentSeasonalContent.phase,
             }}
             seasonal={currentSeasonalContent}
           />
           <FinalPushSection
             seasonType={{
-              season: currentSeasonConfig!.season,
-              phase: currentSeasonConfig!.phase,
+              season: currentSeasonalContent.season,
+              phase: currentSeasonalContent.phase,
             }}
             seasonal={currentSeasonalContent}
           />

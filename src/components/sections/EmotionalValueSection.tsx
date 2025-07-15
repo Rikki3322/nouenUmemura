@@ -55,7 +55,7 @@ const EmotionalValueSection = () => {
           </FadeInOnScroll>
         </div>
 
-        <div className="rounded-xl p-6 space-y-4">
+        <div className="rounded p-6 space-y-4">
           <Image
             src="/assets/images/emotionalValue/001.webp"
             alt="プロフィール"

@@ -1,5 +1,5 @@
 import { seasonConfig, type SeasonType } from '@/data/season-config';
-import { seasonalContents } from '@/data/seasonal-contents';
+import { seasonalContents_ja } from '@/data/seasonal-contents.ja'; // ← ローカライズ不要な用途なので日本語で固定
 
 /**
  * 現在の日付から SeasonType を取得（month ベース）
@@ -16,13 +16,13 @@ export const getCurrentSeasonType = (date: Date = new Date()): SeasonType => {
 };
 
 /**
- * 現在の季節コンテンツを取得
+ * 現在の季節コンテンツを取得（日本語固定）
  */
 export const getCurrentSeasonalContent = () => {
   const { season, phase } = getCurrentSeasonType();
-  const content = seasonalContents.find(
+  const content = seasonalContents_ja.find(
     (item) => item.season === season && item.phase === phase
   );
 
-  return content ?? seasonalContents.find((item) => item.season === 'off')!;
+  return content ?? seasonalContents_ja.find((item) => item.season === 'off')!;
 };

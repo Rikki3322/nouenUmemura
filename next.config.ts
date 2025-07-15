@@ -1,11 +1,15 @@
-import type { NextConfig } from 'next';
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import withNextIntl from 'next-intl/plugin';
+import type { NextConfig } from 'next';
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const withIntl = withNextIntl(); // ✅ ここは空でOK
+
 const nextConfig: NextConfig = {
+  output: 'standalone',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -13,7 +17,6 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  // 必要に応じて追加設定
 };
 
-export default bundleAnalyzer(nextConfig);
+export default bundleAnalyzer(withIntl(nextConfig));

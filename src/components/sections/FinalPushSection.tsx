@@ -23,7 +23,7 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
-            <div className="bg-red-50 rounded-xl p-6">
+            <div className="bg-red-50 rounded p-6">
               <div className="flex justify-center items-center gap-3 mb-4 text-center">
                 <Gift className="text-red-600" size={24} />
                 <h2 className="sm:text-2xl text-xl font-bold text-red-600">

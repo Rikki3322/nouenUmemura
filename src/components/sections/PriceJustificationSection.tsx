@@ -32,7 +32,7 @@ const PriceJustificationSection = () => {
           </FadeInOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-gray-50 rounded p-6">
               <div className="space-y-4">
                 {/* 以下アイコンとテキストのセクションは変更なし */}
                 <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ const PriceJustificationSection = () => {
               </div>
             </div>
 
-            <div className="bg-green-50 rounded-xl p-6 leading-relaxed">
+            <div className="bg-green-50 rounded p-6 leading-relaxed">
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-8">
                   スーパーのアスパラとは

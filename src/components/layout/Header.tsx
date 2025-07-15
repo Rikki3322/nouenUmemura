@@ -4,10 +4,26 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from '@/components/icons/lucide-icons';
 import Image from 'next/image';
 import { Button } from '@/app/ui/button';
+import { usePathname, useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+
+  // 切り替え先ロケール
+  const switchTo = locale === 'ja' ? 'en' : 'ja';
+
+  const handleLanguageSwitch = () => {
+    // 現在のパスから /ja や /en を除去して、新しいロケールを付加
+    const newPathname = `/${switchTo}${pathname.replace(/^\/(ja|en)/, '')}`;
+    router.push(newPathname);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +71,6 @@ const Header = () => {
         </div>
 
         {/* ハンバーガーメニュー */}
-
         <Button
           className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition-colors z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -68,6 +83,11 @@ const Header = () => {
             <Menu className={`!w-7 !h-7 ${iconColor}`} />
           )}
         </Button>
+
+        {/* 言語切り替えボタン（右上） */}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2">
+          <LanguageSwitcher />
+        </div>
       </div>
 
       {/* モバイルメニュー */}

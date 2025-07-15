@@ -12,7 +12,7 @@ const RiskReductionSection = () => {
             </h2>
           </div>
 
-          <div className="bg-green-50 rounded-xl p-6">
+          <div className="bg-green-50 rounded p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">

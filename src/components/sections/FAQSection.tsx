@@ -53,7 +53,7 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                className="bg-white rounded overflow-hidden shadow-sm border border-gray-100"
               >
                 <Button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}

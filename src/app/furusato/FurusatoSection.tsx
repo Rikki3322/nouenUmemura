@@ -141,7 +141,7 @@ const FurusatoPage = () => {
       <div className="pt-8">
         <a
           href="https://item.rakuten.co.jp/f412058-imari/10001970/"
-          className="block text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-xl transition"
+          className="block text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded transition"
           target="_blank"
           rel="noopener noreferrer"
         >
