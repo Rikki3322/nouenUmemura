@@ -4,6 +4,18 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image'; // ← 追加
 import { Menu, X } from '@/components/icons/lucide-icons';
 import { Button } from '@/app/ui/button';
+import { useTranslations } from 'next-intl';
+
+const t = useTranslations('Header');
+
+const links = [
+  { href: '/', label: t('nav.home') },
+  { href: '/stay', label: t('nav.stay') },
+  { href: '/ecsites', label: t('nav.ecsites') },
+  { href: '/furusato', label: t('nav.furusato') },
+  { href: '/nohaku', label: t('nav.nohaku') },
+  { href: '/contact', label: t('nav.contact') },
+];
 
 const ScrolledHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -75,7 +87,7 @@ const ScrolledHeader = () => {
               { href: '/stay', text: '農家民宿うめむら' },
               { href: '/ecsites', text: '購入サイト一覧' },
               { href: '/furusato', text: 'ふるさと納税' },
-              { href: '/nohaku', text: '農泊準備中' },
+              { href: '/nohaku', text: '農泊（準備中）' },
               { href: '/contact', text: 'お問い合わせ' },
             ].map(({ href, text }) => (
               <a
@@ -88,12 +100,7 @@ const ScrolledHeader = () => {
               </a>
             ))}
 
-            <Button
-              variant="cta"
-              className="w-full min-h-[40px] text-sm font-semibold"
-            >
-              LINEともだちになる
-            </Button>
+            <Button>{t('lineFriend')}</Button>
           </nav>
         </div>
       )}

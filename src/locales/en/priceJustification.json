@@ -1,0 +1,39 @@
+{
+  "title": {
+    "line1": "A class apart from supermarket asparagus",
+    "highlight": "Exceptional",
+    "line2": "No fibers, rich sweetness"
+  },
+  "description": "Enjoy its sweetness and texture whether eaten raw, lightly boiled, or stir-fried.",
+  "features": {
+    "soil": {
+      "title": "Fluffy soil rich in microorganisms",
+      "text": "Grown with compost from Imari beef, our soil allows roots to stretch freely."
+    },
+    "water": {
+      "title": "Crystal-clear soft water from layered rocks",
+      "text": "Spring water filtered through natural strata gently nourishes the roots and adds depth to the flavor."
+    },
+    "temperature": {
+      "title": "Blessings of temperature differences",
+      "text": "The contrast between warm days and cool nights concentrates the sweetness and produces a tender texture."
+    },
+    "love": {
+      "title": "Lovingly grown with care and effort",
+      "text": "Our dedication as a farming couple led to a prestigious gold award."
+    },
+    "shipping": {
+      "title": "Chilled and shipped immediately after harvest",
+      "text": "We deliver directly with freshness perfectly preserved."
+    },
+    "award": {
+      "title": "Award-winning quality",
+      "text": "Gold award at the 2024 Vegetable Sommelier Summit"
+    }
+  },
+  "quality": {
+    "title": "Quality far beyond supermarket asparagus",
+    "subtitle": "Only possible because it’s directly from the farm — achieving the highest quality",
+    "body": "What matters most is who grows it and how it's delivered.\nFreshly harvested asparagus is delicate — exposure to water or air quickly reduces its freshness.\n\nAt Umemura Farm, we store it under precise temperature control right after harvest and ship it on the same day to preserve peak freshness.\n\nThis minimal processing and speed create value that exceeds the price."
+  }
+}

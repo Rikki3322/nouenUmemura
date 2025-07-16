@@ -4,35 +4,33 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
+import { useTranslations } from 'next-intl';
 
 const FAQSection = () => {
+  const t = useTranslations('FAQSection');
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
+  // 多言語対応済みの質問・回答を t() で取得
   const faqs = [
     {
-      question: '本当に生で食べられるの？',
-      answer:
-        'はい、ハウス栽培の「ウェルカム」という品種を使用しており、甘みがあってやわらかく、生でも美味しくお召し上がりいただけます。',
+      question: t('faqs.0.question'),
+      answer: t('faqs.0.answer'),
     },
     {
-      question: '保存方法は？',
-      answer:
-        '袋に入れたまま、冷蔵庫で立てて保存してください。袋の底に1cmほど水を入れておくと、鮮度がより長持ちします。',
+      question: t('faqs.1.question'),
+      answer: t('faqs.1.answer'),
     },
     {
-      question: '茹で時間は？',
-      answer:
-        '根元から15cmほどの部分の皮をピーラーで剥き、約30秒茹でてお召し上がりください。筋がなく、やわらかい食感が特徴です。',
+      question: t('faqs.2.question'),
+      answer: t('faqs.2.answer'),
     },
     {
-      question: '支払い方法は？',
-      answer:
-        '各オンラインサイトでの決済に対応しています。LINEからのご注文の場合は、代金引換もご利用いただけます。',
+      question: t('faqs.3.question'),
+      answer: t('faqs.3.answer'),
     },
     {
-      question: '配送について',
-      answer:
-        '朝採れのアスパラガスを丁寧に梱包し、順次発送いたします。詳しい配送スケジュールは、各オンラインサイトにてご確認いただけます。',
+      question: t('faqs.4.question'),
+      answer: t('faqs.4.answer'),
     },
   ];
 
@@ -42,11 +40,9 @@ const FAQSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              よくあるご質問
+              {t('title')}
             </h2>
-            <p className="text-base text-gray-700">
-              お客様からよくいただくご質問にお答えします。
-            </p>
+            <p className="text-base text-gray-700">{t('description')}</p>
           </div>
 
           <div className="space-y-3">
@@ -87,17 +83,17 @@ const FAQSection = () => {
 
           <div className="text-center mt-8">
             <p className="text-gray-700 mb-8">
-              他にも質問がございましたら、
+              {t('contactPrompt.line1')}
               <br className="block sm:hidden" />
-              お気軽にお問い合わせください。
+              {t('contactPrompt.line2')}
             </p>
             <Button
               asChild
               variant="cta"
               className="text-sm min-h-[40px]"
-              aria-label="お問い合わせページへ"
+              aria-label={t('contactButtonLabel')}
             >
-              <Link href="/contact">お問い合わせ</Link>
+              <Link href="/contact">{t('contactButtonText')}</Link>
             </Button>
           </div>
         </div>

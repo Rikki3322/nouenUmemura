@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": {
+      "line1": "生で食べて",
+      "highlight": "びっくり！",
+      "line3": "濃厚なうまみと甘み"
+    },
+    "description": "湧き水と寒暖差が育んだ、スーパーでは出会えない極上のアスパラ",
+    "award": "野菜ソムリエサミット金賞受賞",
+    "cta": {
+      "tasteNow": "今すぐ味わう",
+      "orderViaLine": "LINE で注文"
+    },
+    "trust": {
+      "morningShipping": "朝採れ即日発送",
+      "directFromFarm": "生産者直送"
+    },
+    "satisfaction": "お客様満足度"
+  },
+  "urgency": {
+    "note": "収穫量によって販売終了の場合があります"
+  },
+  "FinalPushSection": {
+    "defaultMain": "今だけの特別ボーナス",
+    "defaultSub": "限定オファー実施中",
+    "stockWarning": "※収穫量によって販売終了の場合があります",
+    "message1": "美味しい野菜を通じて、",
+    "message2": "お客様の食卓に笑顔を届けたい。",
+    "message3": "「美味しい！」の声で、",
+    "message4": "家族の会話が弾んでほしい。",
+    "message5": "私たちの愛情込めて育てたアスパラが、",
+    "message6": "あなたの大切な人との時間を、",
+    "message7": "より特別なものにしてくれたら、",
+    "message8": "こんなに嬉しいことはありません。",
+    "farmName": "うめむら農園",
+    "cta": "この甘さを今すぐ体験する"
+  }
+}

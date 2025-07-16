@@ -5,7 +5,7 @@ import { Menu, X } from '@/components/icons/lucide-icons';
 import Image from 'next/image';
 import { Button } from '@/app/ui/button';
 import { usePathname, useRouter } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Header = () => {
@@ -15,12 +15,11 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
+  const t = useTranslations('Header');
 
-  // 切り替え先ロケール
   const switchTo = locale === 'ja' ? 'en' : 'ja';
 
   const handleLanguageSwitch = () => {
-    // 現在のパスから /ja や /en を除去して、新しいロケールを付加
     const newPathname = `/${switchTo}${pathname.replace(/^\/(ja|en)/, '')}`;
     router.push(newPathname);
   };
@@ -36,6 +35,15 @@ const Header = () => {
   const textColor = isScrolled ? 'text-gray-900' : 'text-white';
   const iconColor = isScrolled ? 'text-gray-900' : 'text-white';
   const headerBg = isScrolled ? 'bg-white' : 'bg-transparent';
+
+  const navLinks = [
+    { href: '/', label: t('nav.home') },
+    { href: '/stay', label: t('nav.stay') },
+    { href: '/ecsites', label: t('nav.ecsites') },
+    { href: '/furusato', label: t('nav.furusato') },
+    { href: '/nohaku', label: t('nav.nohaku') },
+    { href: '/contact', label: t('nav.contact') },
+  ];
 
   return (
     <>
@@ -84,7 +92,7 @@ const Header = () => {
           )}
         </Button>
 
-        {/* 言語切り替えボタン（右上） */}
+        {/* 言語切り替え */}
         <div className="absolute right-4 top-1/2 -translate-y-1/2">
           <LanguageSwitcher />
         </div>
@@ -95,21 +103,14 @@ const Header = () => {
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40">
           <div className="pt-20 px-4">
             <nav className="flex flex-col space-y-4">
-              {[
-                { href: '/', text: 'トップページ' },
-                { href: '/stay', text: '農家民宿うめむら' },
-                { href: '/ecsites', text: '購入サイト一覧' },
-                { href: '/furusato', text: 'ふるさと納税' },
-                { href: '/nohaku', text: '農泊準備中' },
-                { href: '/contact', text: 'お問い合わせ' },
-              ].map(({ href, text }) => (
+              {navLinks.map(({ href, label }) => (
                 <a
-                  key={text}
+                  key={href}
                   href={href}
                   className="text-white text-lg font-medium hover:text-green-300 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {text}
+                  {label}
                 </a>
               ))}
 
@@ -117,7 +118,7 @@ const Header = () => {
                 variant="cta"
                 className="w-full min-h-[40px] text-sm font-semibold"
               >
-                LINEともだちになる
+                {t('lineFriend')}
               </Button>
             </nav>
           </div>

@@ -1,0 +1,32 @@
+{
+  "title": "Frequently Asked Questions",
+  "description": "Here are answers to some common questions from our customers.",
+  "faqs": [
+    {
+      "question": "Can I really eat it raw?",
+      "answer": "Yes, we use a variety called 'Welcome' grown in greenhouses. It's sweet and tender, making it delicious even when eaten raw."
+    },
+    {
+      "question": "How should I store it?",
+      "answer": "Keep it in the bag and store upright in the fridge. Putting about 1cm of water in the bottom of the bag helps keep it fresh longer."
+    },
+    {
+      "question": "How long should I boil it?",
+      "answer": "Peel about 15cm from the root end with a peeler and boil for about 30 seconds. It’s soft and stringless."
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "answer": "Online store payments are accepted. If ordering via LINE, cash on delivery is also available."
+    },
+    {
+      "question": "What about delivery?",
+      "answer": "We ship freshly harvested asparagus with care. Please check delivery schedules on each online site."
+    }
+  ],
+  "contactPrompt": {
+    "line1": "If you have any other questions,",
+    "line2": "please feel free to contact us."
+  },
+  "contactButtonText": "Contact Us",
+  "contactButtonLabel": "Go to contact page"
+}

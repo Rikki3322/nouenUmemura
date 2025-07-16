@@ -6,6 +6,7 @@ import { Heart } from '@/components/icons/lucide-icons';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import CarouselInfiniteScroll from '@/components/animations/CarouselInfiniteScroll';
 import CarouselSingleSlide from '@/components/animations/CarouselSingleSlide';
+import { useTranslations } from 'next-intl';
 
 const IMAGES = [
   '/assets/images/emotionalValue/002.webp',
@@ -30,6 +31,7 @@ const IMAGES = [
 
 const EmotionalValueSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const t = useTranslations('emotionalValue');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,9 +48,9 @@ const EmotionalValueSection = () => {
             <div className="flex items-center justify-center gap-2 mb-4">
               <Heart className="text-green-500" size={24} />
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-relaxed">
-                うめむら夫婦からの
+                {t('title.line1')}
                 <br />
-                メッセージ
+                {t('title.line2')}
               </h2>
               <Heart className="text-green-500" size={24} />
             </div>
@@ -64,19 +66,9 @@ const EmotionalValueSection = () => {
             className="w-full h-auto object-cover rounded shadow"
             priority
           />
-          <p className="text-gray-700 text-lg">
-            伊万里の美しい自然の中で、湧水と愛情をたっぷり注いで
-            アスパラガスを育てています。
-          </p>
-          <p className="text-gray-700 text-lg">
-            実は耕作放棄地からのスタートでした。
-            でも夫婦で支え合いながら、毎日大切に育て続けた結果、
-            ありがたいことに金賞をいただくことができました。
-          </p>
-          <p className="text-gray-700 text-lg">
-            お客様からの『美味しかった！』の声が、
-            どんな賞よりも嬉しく、明日も頑張らんばーと励みになっています。
-          </p>
+          <p className="text-gray-700 text-lg">{t('body.0')}</p>
+          <p className="text-gray-700 text-lg">{t('body.1')}</p>
+          <p className="text-gray-700 text-lg">{t('body.2')}</p>
         </div>
 
         {/* Desktop: infinite scroll */}

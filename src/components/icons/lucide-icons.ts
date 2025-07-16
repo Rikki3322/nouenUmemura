@@ -48,6 +48,7 @@ import {
   Sparkles,
   FileText,
   Send,
+  ShieldCheck,
 } from 'lucide-react';
 
 export {
@@ -100,4 +101,5 @@ export {
   Sparkles,
   FileText,
   Send,
+  ShieldCheck,
 };

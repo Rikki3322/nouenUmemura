@@ -1,11 +1,15 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image'; // ✅ 追加
+import Image from 'next/image';
 import { Gift } from '@/components/icons/lucide-icons';
 import { SeasonType } from '@/data/season-config';
 import { SeasonalContent } from '@/data/seasonal-contents';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { useTranslations } from 'next-intl';
+
+// 静的インポート（blur対応）
+import border001 from '@/../public/assets/images/border/001.png';
 
 interface FinalPushSectionProps {
   seasonType: SeasonType;
@@ -16,6 +20,7 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
   seasonType,
   seasonal,
 }) => {
+  const t = useTranslations('finalPushSection');
   const content = seasonal;
 
   return (
@@ -27,19 +32,18 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
               <div className="flex justify-center items-center gap-3 mb-4 text-center">
                 <Gift className="text-red-600" size={24} />
                 <h2 className="sm:text-2xl text-xl font-bold text-red-600">
-                  {content.finalPushMainMessage || '今だけの特別ボーナス'}
+                  {content.finalPushMainMessage || t('defaultMain')}
                 </h2>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-center items-center gap-2 text-center">
                   <p className="text-gray-900">
-                    {content.finalPushSubMessage || '限定オファー実施中'}
+                    {content.finalPushSubMessage || t('defaultSub')}
                   </p>
                 </div>
-                {/* 在庫警告文 */}
                 {content.season !== 'off' && (
                   <div className="text-sm text-gray-600 text-center">
-                    ※収穫量によって販売終了の場合があります
+                    {t('stockWarning')}
                   </div>
                 )}
               </div>
@@ -47,46 +51,47 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
 
             <FadeInOnScroll>
               <Image
-                src="/assets/images/border/001.png"
+                src={border001}
                 alt="border01"
-                width={1200} // ✅ 実画像に応じて調整
+                width={1200}
                 height={80}
                 className="w-full h-auto"
+                placeholder="blur"
               />
             </FadeInOnScroll>
 
             <div className="text-center space-y-6">
               <div className="space-y-4">
                 <p className="text-gray-700">
-                  美味しい野菜を通じて、
+                  {t('message1')}
                   <br />
-                  お客様の食卓に笑顔を届けたい。
+                  {t('message2')}
                 </p>
                 <p className="text-gray-700">
-                  「美味しい！」の声で、
+                  {t('message3')}
                   <br />
-                  家族の会話が弾んでほしい。
+                  {t('message4')}
                 </p>
                 <p className="text-gray-700">
-                  私たちの愛情込めて育てたアスパラが、
+                  {t('message5')}
                   <br />
-                  あなたの大切な人との時間を、
+                  {t('message6')}
                   <br />
-                  より特別なものにしてくれたら、
+                  {t('message7')}
                   <br />
-                  こんなに嬉しいことはありません。
+                  {t('message8')}
                 </p>
               </div>
 
               <div>
                 <p className="text-gray-900 font-bold text-lg mb-4">
-                  🌱 うめむら農園 🌱
+                  🌱 {t('farmName')} 🌱
                 </p>
                 <a
                   href="#action"
                   className="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition-colors text-lg min-h-[48px]"
                 >
-                  この甘さを今すぐ体験する
+                  {t('cta')}
                 </a>
               </div>
             </div>

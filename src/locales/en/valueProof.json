@@ -1,0 +1,24 @@
+{
+  "title": "Proof of Quality",
+  "awards": {
+    "title": "Recognized Achievements",
+    "line1": "JA Imari Yumeimari Asparagus Division - Grand Prize Winner",
+    "line2": "March 2024 - Gold Medal at the Vegetable Sommelier Summit",
+    "line3": "Featured in special menu by Executive Chef at Hotel Okura JR Huis Ten Bosch"
+  },
+  "customerVoice": "Customer Testimonials",
+  "testimonials": [
+    {
+      "text": "\"Sweeter than Hokkaido asparagus! Impressive size and freshness. Just boiling brought out the full flavor.\"",
+      "source": "(From a Tabechoku customer)"
+    },
+    {
+      "text": "\"Tried it raw and was amazed by the sweetness! I immediately decided to reorder.\"",
+      "source": "(From a PokéMarche customer)"
+    },
+    {
+      "text": "\"Can’t wait for the season! Bought it last year and was thrilled. Thick and tender — just perfect.\"",
+      "source": "(From a Tabechoku customer)"
+    }
+  ]
+}

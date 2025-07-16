@@ -1,0 +1,58 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "contact": "お問い合わせ"
+  },
+  "title": "お問い合わせ",
+  "description": "必要事項にご入力の上、送信してください。",
+  "required": "必須",
+  "optional": "任意",
+  "inquiryType": {
+    "label": "何についてですか？"
+  },
+  "inquiryOptions": [
+    "BASEで購入したアスパラガス",
+    "楽天で購入したアスパラガス",
+    "ポケマルで購入したアスパラガス",
+    "食べチョクで購入したアスパラガス",
+    "アスパラガス全般",
+    "出荷/配送",
+    "農家民宿うめむら",
+    "日帰りBBQ",
+    "収穫体験",
+    "農泊",
+    "修学旅行",
+    "その他"
+  ],
+  "message": {
+    "label": "お問い合わせ内容",
+    "placeholder": "例：本当に生で食べられるの？"
+  },
+  "fields": {
+    "name": { "label": "お名前", "placeholder": "例：伊万里 太郎" },
+    "kana": { "label": "ふりがな", "placeholder": "例：いまり たろう" },
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "例：TaroImari@yahoo.com"
+    },
+    "phone": { "label": "電話番号", "placeholder": "例：0955-23-0000" },
+    "postal_code": { "label": "郵便番号", "placeholder": "例：848-0027" },
+    "address": {
+      "label": "住所",
+      "placeholder": "例：佐賀県伊万里市立花町○○番地"
+    }
+  },
+  "privacy": {
+    "intro": "ご提供いただきました情報は、当サイトのプライバシーポリシーに則ってお取り扱い致します。詳細な個人情報取り扱いにつきましては、",
+    "link": "プライバシーポリシー",
+    "outro": " をご確認ください。",
+    "confirm": "確認画面は表示されません。上記内容で宜しければチェックを入れて送信ボタンをクリックして下さい。"
+  },
+  "submit": "送信する",
+  "validation": {
+    "requiredFields": "全ての必須項目に入力してください。"
+  },
+  "alert": {
+    "submitted": "送信しました！"
+  }
+}

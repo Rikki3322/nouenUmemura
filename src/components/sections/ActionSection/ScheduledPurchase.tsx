@@ -1,13 +1,12 @@
 'use client';
 
-import { seasonalContents } from '@/data/seasonal-contents';
+import { SeasonalContent } from '@/data/seasonal-contents';
 import { getEcSites } from '@/data/ec-sites';
 import { Button } from '@/app/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import RandomDishImage from '../../layout/RandomDishImage';
-
-type SeasonalContent = (typeof seasonalContents)[number];
+import { useTranslations } from 'next-intl';
 
 const ecSites = getEcSites();
 
@@ -16,13 +15,15 @@ interface ScheduledPurchaseProps {
 }
 
 const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
+  const t = useTranslations('scheduledPurchase');
+
   return (
-    <div className="rounded-2xl  bg-white p-6">
+    <div className="rounded-xl  bg-white p-6">
       <div className="mb-4">
         <div className="flex gap-2 mb-2">
           {currentContent.season !== 'off' && (
             <span className="inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800">
-              お届け日指定でお届け
+              {t('scheduledDelivery')}
             </span>
           )}
         </div>

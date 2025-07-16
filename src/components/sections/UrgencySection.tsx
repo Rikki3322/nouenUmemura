@@ -41,7 +41,7 @@ const UrgencySection: React.FC<UrgencySectionProps> = ({
                 <div key={i} className="relative w-[245px] h-[60px]">
                   <Image
                     src="/assets/images/border/002.png"
-                    alt=""
+                    alt="border02"
                     fill
                     className="object-contain"
                     sizes="245px"

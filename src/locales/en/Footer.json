@@ -1,0 +1,20 @@
+{
+  "farmName": "Umemura Farm",
+  "description": "We grow asparagus with love in the rich nature of Imari, Saga.",
+  "accessTitle": "Access",
+  "address": "1375-2 Okawano, Okawa-cho, Imari-shi, Saga 849-5251",
+  "servicesTitle": "Services",
+  "quickLinks": {
+    "stay": "Farmstay Umemura",
+    "purchase": "Where to Buy",
+    "furusato": "Furusato Tax",
+    "nohaku": "Nohaku (Coming soon)",
+    "contact": "Contact"
+  },
+  "newsTitle": "Latest News",
+  "newsDescription": "Receive updates from our farm via LINE.",
+  "lineAddFriend": "Add us on LINE",
+  "privacy": "Privacy Policy",
+  "commerce": "Legal Notice",
+  "copyright": "© 2025 Umemura Farm. All rights reserved."
+}

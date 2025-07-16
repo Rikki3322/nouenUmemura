@@ -1,0 +1,58 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "contact": "Contact"
+  },
+  "title": "Contact Us",
+  "description": "Please fill in the required fields and submit the form.",
+  "required": "Required",
+  "optional": "Optional",
+  "inquiryType": {
+    "label": "What is your inquiry about?"
+  },
+  "inquiryOptions": [
+    "Asparagus purchased on BASE",
+    "Asparagus purchased on Rakuten",
+    "Asparagus purchased on Pokemaru",
+    "Asparagus purchased on Tabechoku",
+    "General asparagus inquiry",
+    "Shipping/Delivery",
+    "Farm stay Umemura",
+    "Day trip BBQ",
+    "Harvest experience",
+    "Farm stay program",
+    "School trips",
+    "Other"
+  ],
+  "message": {
+    "label": "Message",
+    "placeholder": "e.g., Can I really eat it raw?"
+  },
+  "fields": {
+    "name": { "label": "Name", "placeholder": "e.g., Taro Imari" },
+    "kana": { "label": "Phonetic name", "placeholder": "e.g., imari taro" },
+    "email": { "label": "Email", "placeholder": "e.g., TaroImari@yahoo.com" },
+    "phone": { "label": "Phone", "placeholder": "e.g., 0955-23-0000" },
+    "postal_code": {
+      "label": "Postal code",
+      "placeholder": "e.g., 848-0027"
+    },
+    "address": {
+      "label": "Address",
+      "placeholder": "e.g., 1375-2, Tachibana, Imari, Saga"
+    }
+  },
+  "privacy": {
+    "intro": "Your information will be handled in accordance with our privacy policy. For more details, please see our ",
+    "link": "Privacy Policy",
+    "outro": ".",
+    "confirm": "There will be no confirmation screen. If everything is correct, check the box and click the submit button."
+  },
+  "submit": "Submit",
+  "validation": {
+    "requiredFields": "Please fill in all required fields."
+  },
+  "alert": {
+    "submitted": "Form submitted!"
+  }
+}

@@ -11,6 +11,12 @@ import SubscriptionPurchase from './SubscriptionPurchase';
 import OrderOptions from './OrderOptions';
 import Image from 'next/image';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { useTranslations } from 'next-intl';
+
+// 静的インポート（blur対応）
+import border003 from '@/../public/assets/images/border/003.png';
+import action001 from '@/../public/assets/images/action/001.webp';
+import action002 from '@/../public/assets/images/action/002.png';
 
 interface ActionSectionProps {
   seasonType: SeasonType;
@@ -21,7 +27,7 @@ const ActionSection: React.FC<ActionSectionProps> = ({
   seasonType,
   seasonal,
 }) => {
-  const content = seasonal;
+  const t = useTranslations('action');
   const [activeTab, setActiveTab] = useState<TabType>('immediate');
 
   const renderContent = () => {
@@ -38,10 +44,12 @@ const ActionSection: React.FC<ActionSectionProps> = ({
   };
 
   return (
-    <section className="bg-white py-16" id="action">
+    <section className="bg-white py-12 md:py-16" id="action">
       <div className="container mx-auto px-4">
         <FadeInOnScroll>
-          <h2 className="mb-6 text-center text-3xl font-bold">食べてみる</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-10">
+            {t('title')}
+          </h2>
         </FadeInOnScroll>
 
         {/* タブ切り替え */}
@@ -54,22 +62,25 @@ const ActionSection: React.FC<ActionSectionProps> = ({
         <OrderOptions />
       </div>
 
-      {/* 商品画像（absolute + relative版） */}
+      {/* 商品画像とボーダー装飾 */}
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <Image
-            src="/assets/images/border/003.png"
+            src={border003}
             alt="border03"
             width={1200}
-            height={100}
-            className="w-full h-auto"
+            height={80}
+            className="w-full h-auto mt-8"
+            placeholder="blur"
           />
-          <div className="flex flex-col md:flex-row justify-center gap-4 w-full mt-[2rem] px-4">
+
+          <div className="flex flex-col md:flex-row justify-center gap-4 w-full mt-8">
             {/* 1枚目 */}
-            <div className="relative w-full aspect-square rounded shadow overflow-hidden">
+            <div className="relative w-full md:w-1/2 aspect-square rounded shadow overflow-hidden">
               <Image
-                src="/assets/images/action/001.webp"
+                src={action001}
                 alt="package001"
+                placeholder="blur"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -77,10 +88,11 @@ const ActionSection: React.FC<ActionSectionProps> = ({
             </div>
 
             {/* 2枚目 */}
-            <div className="relative w-full aspect-square rounded shadow overflow-hidden">
+            <div className="relative w-full md:w-1/2 aspect-square rounded shadow overflow-hidden">
               <Image
-                src="/assets/images/action/002.png"
+                src={action002}
                 alt="package002"
+                placeholder="blur"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

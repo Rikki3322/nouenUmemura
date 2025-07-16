@@ -59,19 +59,20 @@ const SolutionSection = () => {
         <div className="flex justify-center gap-2 mt-[2rem] mx-auto flex-wrap md:flex-nowrap">
           <div className="relative w-full md:w-[70%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
-              src="/assets/images/solution/001.webp"
+              src="/assets/images/solution/001.png"
               alt="アスパラ"
               fill
-              style={{ objectFit: 'cover', borderRadius: '1rem' }}
+              style={{ objectFit: 'cover' }} // ← borderRadius は不要
               sizes="(max-width: 768px) 100vw, 70vw"
             />
           </div>
+
           <div className="relative w-full md:w-[30%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
-              src="/assets/images/solution/002.png"
+              src="/assets/images/solution/002.webp"
               alt="アスパラ"
               fill
-              style={{ objectFit: 'contain', borderRadius: '1rem' }}
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 30vw"
             />
           </div>
@@ -80,10 +81,10 @@ const SolutionSection = () => {
         <div className="flex justify-center gap-2 mt-[0.5rem] mx-auto flex-wrap md:flex-nowrap">
           <div className="relative w-full md:w-[30%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
-              src="/assets/images/solution/003.png"
+              src="/assets/images/solution/003.webp"
               alt="アスパラ"
               fill
-              style={{ objectFit: 'contain', borderRadius: '1rem' }}
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 30vw"
             />
           </div>
@@ -92,7 +93,7 @@ const SolutionSection = () => {
               src="/assets/images/solution/004.webp"
               alt="アスパラ"
               fill
-              style={{ objectFit: 'cover', borderRadius: '1rem' }}
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 70vw"
             />
           </div>

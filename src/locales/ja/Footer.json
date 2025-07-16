@@ -1,0 +1,20 @@
+{
+  "farmName": "うめむら農園",
+  "description": "佐賀県伊万里の豊かな自然の中で、愛情込めてアスパラガスを栽培しています。",
+  "accessTitle": "アクセス",
+  "address": "佐賀県伊万里市大川町大川野1375-2",
+  "servicesTitle": "サービス",
+  "quickLinks": {
+    "stay": "農家民宿うめむら",
+    "purchase": "購入先サイト一覧",
+    "furusato": "ふるさと納税",
+    "nohaku": "農泊（準備中）",
+    "contact": "お問い合わせ"
+  },
+  "newsTitle": "最新情報",
+  "newsDescription": "農園からのお知らせをLINEでお届けします",
+  "lineAddFriend": "LINEともだち追加",
+  "privacy": "プライバシーポリシー",
+  "commerce": "特定商取引法",
+  "copyright": "© 2025 うめむら農園. All rights reserved."
+}

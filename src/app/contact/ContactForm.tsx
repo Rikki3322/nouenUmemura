@@ -3,8 +3,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
+import { useTranslations } from 'next-intl';
 
 const ContactForm = () => {
+  const t = useTranslations('ContactForm');
+
   const [form, setForm] = useState({
     name: '',
     kana: '',
@@ -18,24 +21,11 @@ const ContactForm = () => {
   });
 
   const breadcrumbItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'お問い合わせ' },
+    { label: t('breadcrumb.home'), href: '/' },
+    { label: t('breadcrumb.contact') },
   ];
 
-  const inquiryOptions = [
-    'BASEで購入したアスパラガス',
-    '楽天で購入したアスパラガス',
-    'ポケマルで購入したアスパラガス',
-    '食べチョクで購入したアスパラガス',
-    'アスパラガス全般',
-    '出荷/配送',
-    '農家民宿うめむら',
-    '日帰りBBQ',
-    '収穫体験',
-    '農泊',
-    '修学旅行',
-    'その他',
-  ];
+  const inquiryOptions = t.raw('inquiryOptions') as string[];
 
   const isValid =
     form.name &&
@@ -59,36 +49,31 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isValid) {
-      alert('全ての必須項目に入力してください。');
+      alert(t('validation.requiredFields'));
       return;
     }
-    // 送信処理をここに
-    alert('送信しました！');
+    alert(t('alert.submitted'));
   };
 
   return (
     <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 md:py-24 text-black">
-      {/* パンくず */}
       <Breadcrumb items={breadcrumbItems} />
 
-      {/* 見出し */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold border-b border-black pb-4 mb-6">
-          お問い合わせ
+          {t('title')}
         </h1>
-        <h2 className="text-lg leading-relaxed">
-          必要事項にご入力の上、送信してください。
-        </h2>
+        <h2 className="text-lg leading-relaxed">{t('description')}</h2>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-10">
-        {/* 内容 */}
+        {/* 問い合わせ区分 */}
         <div>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-black text-white text-xs px-2 py-0.5 rounded">
-              必須
+              {t('required')}
             </span>
-            <span className="text-lg">何についてですか？</span>
+            <span className="text-lg">{t('inquiryType.label')}</span>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {inquiryOptions.map((option) => (
@@ -107,14 +92,14 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* テキストエリア */}
+        {/* お問い合わせ内容 */}
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="bg-black text-white text-xs px-2 py-0.5 rounded">
-              必須
+              {t('required')}
             </span>
             <label htmlFor="message" className="w-32">
-              お問い合わせ内容
+              {t('message.label')}
             </label>
           </div>
           <textarea
@@ -122,95 +107,67 @@ const ContactForm = () => {
             name="message"
             value={form.message}
             onChange={handleChange}
-            placeholder="例：本当に生で食べられるの？"
+            placeholder={t('message.placeholder')}
             rows={6}
             className="w-full border border-gray-300 bg-[#f9f6f0] p-4 leading-relaxed"
           />
         </div>
 
-        {/* 入力欄群 */}
+        {/* フィールド群 */}
         <div className="space-y-6">
-          {[
-            {
-              label: 'お名前',
-              name: 'name',
-              type: 'text',
-              placeholder: '例：伊万里 太郎',
-              required: true,
-            },
-            {
-              label: 'ふりがな',
-              name: 'kana',
-              type: 'text',
-              placeholder: '例：いまり たろう',
-              required: true,
-            },
-            {
-              label: 'メールアドレス',
-              name: 'email',
-              type: 'email',
-              placeholder: '例：TaroImari@yahoo.com',
-              required: true,
-            },
-            {
-              label: '電話番号',
-              name: 'phone',
-              type: 'tel',
-              placeholder: '例：0955-23-0000',
-              required: true,
-            },
-            {
-              label: '郵便番号',
-              name: 'postal_code',
-              type: 'tel',
-              placeholder: '例：848-0027',
-              required: false,
-            },
-            {
-              label: '住所',
-              name: 'address',
-              type: 'text',
-              placeholder: '例：佐賀県伊万里市立花町○○番地',
-              required: false,
-            },
-          ].map((field) => (
-            <div key={field.name}>
-              <div className="flex items-center gap-2 mb-3">
-                {field.required ? (
-                  <span className="bg-black text-white text-xs px-2 py-0.5 rounded">
-                    必須
+          {(
+            [
+              'name',
+              'kana',
+              'email',
+              'phone',
+              'postal_code',
+              'address',
+            ] as const
+          ).map((key) => {
+            const required = ['name', 'kana', 'email', 'phone'].includes(key);
+            return (
+              <div key={key}>
+                <div className="flex items-center gap-2 mb-3">
+                  <span
+                    className={`text-white text-xs px-2 py-0.5 rounded ${
+                      required ? 'bg-black' : 'bg-gray-400'
+                    }`}
+                  >
+                    {t(required ? 'required' : 'optional')}
                   </span>
-                ) : (
-                  <span className="bg-gray-400 text-white text-xs px-2 py-0.5 rounded">
-                    任意
-                  </span>
-                )}
-                <label htmlFor={field.name} className="w-32">
-                  {field.label}
-                </label>
+                  <label htmlFor={key} className="w-32">
+                    {t(`fields.${key}.label`)}
+                  </label>
+                </div>
+                <input
+                  id={key}
+                  name={key}
+                  type={
+                    key === 'email'
+                      ? 'email'
+                      : key === 'phone' || key === 'postal_code'
+                      ? 'tel'
+                      : 'text'
+                  }
+                  value={form[key]}
+                  onChange={handleChange}
+                  placeholder={t(`fields.${key}.placeholder`)}
+                  className="w-full border border-gray-300 bg-[#f9f6f0] p-4"
+                />
               </div>
-              <input
-                id={field.name}
-                name={field.name}
-                type={field.type}
-                value={form[field.name as keyof typeof form] as string}
-                onChange={handleChange}
-                placeholder={field.placeholder}
-                className="w-full border border-gray-300 bg-[#f9f6f0] p-4"
-              />
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* 利用規約 */}
+        {/* プライバシー同意 */}
         <div className="border-t pt-8">
           <p className="text-sm mb-4 leading-relaxed">
-            ご提供いただきました情報は、当サイトのプライバシーポリシーに則ってお取り扱い致します。
-            詳細な個人情報取り扱いにつきましては、
+            {t('privacy.intro')}
             <Link href="/privacy-policy" className="underline text-blue-700">
-              プライバシーポリシー
+              {t('privacy.link')}
             </Link>
-            をご確認ください。
+            {t('privacy.outro')}
           </p>
           <label className="inline-flex items-start gap-3 leading-relaxed">
             <input
@@ -220,13 +177,11 @@ const ContactForm = () => {
               onChange={handleChange}
               className="mt-1"
             />
-            <span>
-              確認画面は表示されません。上記内容で宜しければチェックを入れて送信ボタンをクリックして下さい。
-            </span>
+            <span>{t('privacy.confirm')}</span>
           </label>
         </div>
 
-        {/* ボタン */}
+        {/* 送信ボタン */}
         <div className="pt-8">
           <button
             type="submit"
@@ -237,7 +192,7 @@ const ContactForm = () => {
                 : 'bg-gray-300 cursor-not-allowed'
             }`}
           >
-            送信する
+            {t('submit')}
           </button>
         </div>
       </form>

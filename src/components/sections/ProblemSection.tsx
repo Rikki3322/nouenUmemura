@@ -7,7 +7,7 @@ import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import Image from 'next/image';
 
 const ProblemSection = () => {
-  const t = useTranslations('Problem');
+  const t = useTranslations('problem');
 
   return (
     <section className="py-4 md:py-12 bg-white">

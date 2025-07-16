@@ -2,6 +2,7 @@
 
 import { cn } from '@/utils/cn';
 import { Button } from '@/app/ui/button';
+import { useTranslations } from 'next-intl';
 
 type TabType = 'immediate' | 'scheduled' | 'subscription';
 
@@ -11,10 +12,12 @@ interface TabSelectorProps {
 }
 
 const TabSelector = ({ activeTab, onTabChange }: TabSelectorProps) => {
+  const t = useTranslations('tabSelector');
+
   const tabs = [
-    { key: 'immediate' as const, label: 'すぐにお届け' },
-    { key: 'scheduled' as const, label: 'お届け日指定' },
-    { key: 'subscription' as const, label: '定期購入' },
+    { key: 'immediate' as const, label: t('immediate') },
+    { key: 'scheduled' as const, label: t('scheduled') },
+    { key: 'subscription' as const, label: t('subscription') },
   ];
 
   return (
@@ -26,7 +29,7 @@ const TabSelector = ({ activeTab, onTabChange }: TabSelectorProps) => {
             onClick={() => onTabChange(tab.key)}
             variant={activeTab === tab.key ? 'cta' : 'default'}
             className={cn(
-              'w-[110px] sm:w-auto', // ← スマホ時に固定幅を指定
+              'w-[110px] sm:w-auto',
               'rounded-md px-4 py-2 text-sm font-medium',
               activeTab !== tab.key && 'text-gray-600 hover:text-gray-800'
             )}

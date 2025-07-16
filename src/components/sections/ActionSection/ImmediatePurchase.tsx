@@ -1,14 +1,13 @@
 'use client';
 
-import { seasonalContents } from '@/data/seasonal-contents';
+import { SeasonalContent } from '@/data/seasonal-contents';
 import { getEcSites } from '@/data/ec-sites';
 import { Button } from '@/app/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import RandomDishImage from '../../layout/RandomDishImage';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-
-type SeasonalContent = (typeof seasonalContents)[number];
+import { useTranslations } from 'next-intl';
 
 const ecSites = getEcSites();
 
@@ -17,13 +16,15 @@ interface ImmediatePurchaseProps {
 }
 
 const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
+  const t = useTranslations('immediatePurchase');
+
   return (
-    <div className="rounded-2xl bg-white p-6">
+    <div className="rounded-xl bg-white p-6">
       <div className="mb-4">
         <div className="flex gap-2 mb-2">
           {currentContent.season !== 'off' && (
             <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">
-              すぐにお届け
+              {t('immediateDelivery')}
             </span>
           )}
         </div>
@@ -35,12 +36,7 @@ const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 mb-4">
           {ecSites.map((site) => (
             <FadeInOnScroll key={site.id}>
-              <Link
-                key={site.id}
-                href={site.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={site.url} target="_blank" rel="noopener noreferrer">
                 <Button
                   asChild
                   variant="outline"
@@ -48,7 +44,7 @@ const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
                 >
                   <div className="flex flex-col items-center gap-1 relative z-10">
                     {/* 背景画像（一部を表示） */}
-                    <div className="absolute top-[-130] left-[-100] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
+                    <div className="absolute top-[-130px] left-[-100px] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
                       <Image
                         src={site.imagePath}
                         alt=""
