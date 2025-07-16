@@ -1,10 +1,11 @@
 'use client';
 
-import React from 'react';
-import { useTranslations } from 'next-intl';
-import { X } from '@/components/icons/lucide-icons';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import React from 'react';
+
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { X } from '@/components/icons/lucide-icons';
 
 const ProblemSection = () => {
   const t = useTranslations('problem');

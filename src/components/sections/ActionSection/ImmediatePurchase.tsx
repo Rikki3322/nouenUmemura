@@ -1,13 +1,15 @@
 'use client';
 
-import { SeasonalContent } from '@/data/seasonal-contents';
-import { getEcSites } from '@/data/ec-sites';
-import { Button } from '@/app/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import RandomDishImage from '../../layout/RandomDishImage';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@/app/ui/button';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { getEcSites } from '@/data/ec-sites';
+import { SeasonalContent } from '@/data/seasonal-contents';
+
+import RandomDishImage from '../../layout/RandomDishImage';
 
 const ecSites = getEcSites();
 

@@ -2,18 +2,18 @@
 'use client';
 
 import React from 'react';
-import StayCTAbutton from './sections/StayCTAbutton';
-import HeroSection from './sections/Hero';
-import AboutSection from './sections/About';
-import RoomSection from './sections/Room';
-import AmenitiesSection from './sections/Amenities';
-import FoodSection from './sections/Food';
-import ExperienceSection from './sections/Experience';
-import AccessSection from './sections/Access';
-import FAQSection from './sections/FAQSection';
 
-const StayPage = () => {
-  return (
+import AboutSection from './sections/About';
+import AccessSection from './sections/Access';
+import AmenitiesSection from './sections/Amenities';
+import ExperienceSection from './sections/Experience';
+import FAQSection from './sections/FAQSection';
+import FoodSection from './sections/Food';
+import HeroSection from './sections/Hero';
+import RoomSection from './sections/Room';
+import StayCTAbutton from './sections/StayCTAbutton';
+
+const StayPage = () => (
     <div>
       <main>
         <StayCTAbutton />
@@ -28,6 +28,5 @@ const StayPage = () => {
       </main>
     </div>
   );
-};
 
 export default StayPage;

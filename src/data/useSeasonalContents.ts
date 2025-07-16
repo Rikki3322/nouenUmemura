@@ -1,7 +1,8 @@
 import { useLocale } from 'next-intl';
-import { seasonalContents_ja } from './seasonal-contents.ja';
-import { seasonalContents_en } from './seasonal-contents.en';
+
 import type { SeasonalContent } from './seasonal-contents';
+import { seasonalContents_en } from './seasonal-contents.en';
+import { seasonalContents_ja } from './seasonal-contents.ja';
 
 export const useSeasonalContents = (): SeasonalContent[] => {
   const locale = useLocale();

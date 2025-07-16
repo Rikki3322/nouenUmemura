@@ -1,16 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import CarouselInfiniteScroll from '@/components/animations/CarouselInfiniteScroll';
+import CarouselSingleSlide from '@/components/animations/CarouselSingleSlide';
 import {
   Bath,
   CircleParking,
   CookingPot,
+  KeyRound,
   WashingMachine,
   Wifi,
-  KeyRound,
 } from '@/components/icons/lucide-icons';
-import CarouselInfiniteScroll from '@/components/animations/CarouselInfiniteScroll';
-import CarouselSingleSlide from '@/components/animations/CarouselSingleSlide';
 
 const amenitiesImages = [
   '/assets/images/stay/amenities/001.webp',
@@ -48,7 +49,7 @@ const AmenitiesSection = () => {
           <p className="text-lg text-gray-600">
             八幡岳を望む静かな場所で、
             <br className="block sm:hidden" />
-            "ちょうどいい"農家の宿です。
+            &quot;ちょうどいい&quot;農家の宿です。
           </p>
         </div>
 

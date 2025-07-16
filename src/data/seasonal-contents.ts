@@ -1,5 +1,5 @@
 // src/data/seasonal-contents.ts
-import type { Season, Phase } from './season-config';
+import type { Phase,Season } from './season-config';
 
 export type SeasonalContent = {
   season: Season;

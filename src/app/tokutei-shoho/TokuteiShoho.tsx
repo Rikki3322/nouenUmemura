@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const breadcrumbItems = [
@@ -61,7 +62,7 @@ const TokuteiShohoPage = () => (
               <a
                 href="https://umemuranouen.com"
                 target="_blank"
-                className="text-blue-600 underline"
+                className="text-blue-600 underline" rel="noreferrer"
               >
                 https://umemuranouen.com
               </a>

@@ -1,6 +1,6 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
-import withNextIntl from 'next-intl/plugin';
 import type { NextConfig } from 'next';
+import withNextIntl from 'next-intl/plugin';
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',

@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+
+import { Button } from '@/app/ui/button';
 import {
-  Instagram,
   Calendar,
+  Instagram,
   MessageCircle,
 } from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const breadcrumbItems = [

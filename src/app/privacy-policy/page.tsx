@@ -2,14 +2,12 @@
 
 import PrivacyPolicy from './PrivacyPolicy';
 
-const PrivacyPolicyPage = () => {
-  return (
+const PrivacyPolicyPage = () => (
     <div>
       <main>
         <PrivacyPolicy />
       </main>
     </div>
   );
-};
 
 export default PrivacyPolicyPage;

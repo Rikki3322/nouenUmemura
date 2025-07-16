@@ -1,14 +1,15 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React from 'react';
+
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import {
   Check,
   FileText,
   Send,
   ShieldCheck,
 } from '@/components/icons/lucide-icons';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { useTranslations } from 'next-intl';
 
 const RiskReductionSection = () => {
   const t = useTranslations('riskReduction');

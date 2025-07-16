@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Heart } from '@/components/icons/lucide-icons';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { useTranslations } from 'next-intl';
+import React, { useEffect, useState } from 'react';
+
 import CarouselInfiniteScroll from '@/components/animations/CarouselInfiniteScroll';
 import CarouselSingleSlide from '@/components/animations/CarouselSingleSlide';
-import { useTranslations } from 'next-intl';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { Heart } from '@/components/icons/lucide-icons';
 
 const IMAGES = [
   '/assets/images/emotionalValue/002.webp',

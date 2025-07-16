@@ -1,7 +1,8 @@
 // レイアウトは構造 header, footer, main
 import React from 'react';
-import ScrolledHeader from '@/components/layout/ScrolledHeader';
+
 import Footer from '@/components/layout/Footer';
+import ScrolledHeader from '@/components/layout/ScrolledHeader';
 
 const PrivacyPolicyLayout: React.FC<{ children: React.ReactNode }> = ({
   children,

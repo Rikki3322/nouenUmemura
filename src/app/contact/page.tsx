@@ -2,16 +2,15 @@
 'use client';
 
 import React from 'react';
+
 import ContactForm from './ContactForm';
 
-const ContactPage = () => {
-  return (
+const ContactPage = () => (
     <div>
       <main>
         <ContactForm />
       </main>
     </div>
   );
-};
 
 export default ContactPage;

@@ -1,12 +1,13 @@
 'use client';
 
-import {
-  MonitorSmartphone,
-  MessageCircle,
-} from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@/app/ui/button';
+import {
+  MessageCircle,
+  MonitorSmartphone,
+} from '@/components/icons/lucide-icons';
 
 const OrderOptions = () => {
   const t = useTranslations('orderOptions');

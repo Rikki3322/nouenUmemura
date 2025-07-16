@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
 import Link from 'next/link';
+import React, { useState } from 'react';
+
+import { Button } from '@/app/ui/button';
+import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 
 const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

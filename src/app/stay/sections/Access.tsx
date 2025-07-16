@@ -1,13 +1,12 @@
 import {
-  MapPin,
   Car,
   FishSymbol,
-  TrainFront,
+  MapPin,
   Plane,
+  TrainFront,
 } from '@/components/icons/lucide-icons';
 
-const AccessSection = () => {
-  return (
+const AccessSection = () => (
     <div className="bg-white">
       <section id="access" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,6 +137,5 @@ const AccessSection = () => {
       </section>
     </div>
   );
-};
 
 export default AccessSection;

@@ -1,21 +1,22 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import {
-  MapPin,
-  Phone,
-  Mail,
-  MessageCircle,
-  Instagram,
-  Facebook,
-  Twitter,
-  AtSign,
-  Youtube,
-  Music2,
-} from '@/components/icons/lucide-icons';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import React from 'react';
+
+import {
+  AtSign,
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Music2,
+  Phone,
+  Twitter,
+  Youtube,
+} from '@/components/icons/lucide-icons';
 
 const Footer = () => {
   const t = useTranslations('Footer');

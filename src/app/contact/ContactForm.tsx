@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
-import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
+
+import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const ContactForm = () => {
   const t = useTranslations('ContactForm');

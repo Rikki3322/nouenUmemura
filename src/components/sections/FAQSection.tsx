@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 import Link from 'next/link';
-import { Button } from '@/app/ui/button';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
+
+import { Button } from '@/app/ui/button';
+import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 
 const FAQSection = () => {
   const t = useTranslations('FAQSection');

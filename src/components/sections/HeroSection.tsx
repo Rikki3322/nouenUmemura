@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import React, { useEffect, useRef, useState } from 'react';
+
+import { Button } from '@/app/ui/button';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import {
   Award,
   MessageCircle,
   ShoppingBasket,
 } from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { useTranslations } from 'next-intl';
 
 const HeroSection = () => {
   const [showVideo, setShowVideo] = useState(false);

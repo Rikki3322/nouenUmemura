@@ -1,13 +1,14 @@
 'use client';
 
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import React from 'react';
-import { Gift, AlertTriangle } from '@/components/icons/lucide-icons';
+
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { AlertTriangle,Gift } from '@/components/icons/lucide-icons';
 import { SeasonType } from '@/data/season-config';
 import { SeasonalContent } from '@/data/seasonal-contents';
 import { useSeasonalContents } from '@/data/useSeasonalContents';
-import Image from 'next/image';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { useTranslations } from 'next-intl';
 
 interface UrgencySectionProps {
   seasonType: SeasonType;

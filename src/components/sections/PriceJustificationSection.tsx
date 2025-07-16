@@ -1,17 +1,18 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import React from 'react';
+
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import {
   Droplets,
-  User,
-  Package,
-  Trophy,
   Leaf,
+  Package,
   Sun,
+  Trophy,
+  User,
 } from '@/components/icons/lucide-icons';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { useTranslations } from 'next-intl';
 
 const PriceJustificationSection = () => {
   const t = useTranslations('priceJustification');

@@ -1,10 +1,9 @@
 'use client';
 
-import FurusatoSection from './FurusatoSection';
 import FurusatoCTAbutton from './FurusatoCTAbutton';
+import FurusatoSection from './FurusatoSection';
 
-const FurusatoSectionPage = () => {
-  return (
+const FurusatoSectionPage = () => (
     <div>
       <main>
         <FurusatoSection />
@@ -12,6 +11,5 @@ const FurusatoSectionPage = () => {
       </main>
     </div>
   );
-};
 
 export default FurusatoSectionPage;

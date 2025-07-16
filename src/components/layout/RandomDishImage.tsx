@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { useEffect, useRef,useState } from 'react';
 
 const randomImages = [
   '/assets/images/action/dishes/001.png',

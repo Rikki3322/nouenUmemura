@@ -1,5 +1,5 @@
-import { getRequestConfig } from 'next-intl/server';
 import fs from 'fs/promises';
+import { getRequestConfig } from 'next-intl/server';
 import path from 'path';
 
 export default getRequestConfig(async ({ locale }) => {

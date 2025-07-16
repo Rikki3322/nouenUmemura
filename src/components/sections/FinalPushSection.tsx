@@ -1,15 +1,15 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
-import { Gift } from '@/components/icons/lucide-icons';
-import { SeasonType } from '@/data/season-config';
-import { SeasonalContent } from '@/data/seasonal-contents';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 // 静的インポート（blur対応）
 import border001 from '@/../public/assets/images/border/001.png';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { Gift } from '@/components/icons/lucide-icons';
+import { SeasonType } from '@/data/season-config';
+import { SeasonalContent } from '@/data/seasonal-contents';
 
 interface FinalPushSectionProps {
   seasonType: SeasonType;

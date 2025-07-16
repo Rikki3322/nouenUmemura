@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
+import React, { useCallback,useEffect, useRef, useState } from 'react';
 
 interface CarouselSingleSlideProps {
   images: string[];

@@ -1,16 +1,15 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { Breadcrumb } from '@/components/layout/Breadcrumb';
-import { Button } from '@/app/ui/button';
-import { ArrowRight, Check } from '@/components/icons/lucide-icons';
-
 import Image from 'next/image';
+import React, { useEffect,useRef, useState } from 'react';
 
-import { questions, recommendSite } from '@/data/recommendation-logic';
-import { Answers, AnswerKey } from '@/types/recommendation-types';
+import { Button } from '@/app/ui/button';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
+import { ArrowRight, Check } from '@/components/icons/lucide-icons';
+import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { getEcSites } from '@/data/ec-sites';
+import { questions, recommendSite } from '@/data/recommendation-logic';
+import { AnswerKey,Answers } from '@/types/recommendation-types';
 
 const sites = getEcSites();
 

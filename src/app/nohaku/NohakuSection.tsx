@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { Breadcrumb } from '@/components/layout/Breadcrumb';
+
 import { Hammer, Mountain, Sparkles } from '@/components/icons/lucide-icons';
+import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const breadcrumbItems = [{ label: 'HOME', href: '/' }, { label: '農泊準備中' }];
 
-const NohakuPage = () => {
-  return (
+const NohakuPage = () => (
     <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 md:py-24 text-black">
       {/* パンくず */}
       <Breadcrumb items={breadcrumbItems} />
@@ -79,6 +79,5 @@ const NohakuPage = () => {
       </div>
     </section>
   );
-};
 
 export default NohakuPage;

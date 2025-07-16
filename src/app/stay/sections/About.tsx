@@ -1,10 +1,10 @@
-import React from 'react';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import Image from 'next/image';
+import React from 'react';
+
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { Instagram } from '@/components/icons/lucide-icons';
 
-const AboutSection = () => {
-  return (
+const AboutSection = () => (
     <section id="about" className="py-16 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -85,6 +85,5 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
 
 export default AboutSection;

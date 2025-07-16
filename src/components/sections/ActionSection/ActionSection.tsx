@@ -1,22 +1,22 @@
 'use client';
 
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+
+import action001 from '@/../public/assets/images/action/001.webp';
+import action002 from '@/../public/assets/images/action/002.png';
+// 静的インポート（blur対応）
+import border003 from '@/../public/assets/images/border/003.png';
+import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { SeasonType } from '@/data/season-config';
 import { SeasonalContent } from '@/data/seasonal-contents';
 
-import TabSelector, { TabType } from './TabSelector';
 import ImmediatePurchase from './ImmediatePurchase';
+import OrderOptions from './OrderOptions';
 import ScheduledPurchase from './ScheduledPurchase';
 import SubscriptionPurchase from './SubscriptionPurchase';
-import OrderOptions from './OrderOptions';
-import Image from 'next/image';
-import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { useTranslations } from 'next-intl';
-
-// 静的インポート（blur対応）
-import border003 from '@/../public/assets/images/border/003.png';
-import action001 from '@/../public/assets/images/action/001.webp';
-import action002 from '@/../public/assets/images/action/002.png';
+import TabSelector, { TabType } from './TabSelector';
 
 interface ActionSectionProps {
   seasonType: SeasonType;

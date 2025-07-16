@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const breadcrumbItems = [
@@ -6,8 +7,7 @@ const breadcrumbItems = [
   { label: 'プライバシーポリシー' },
 ];
 
-const PrivacyPolicy = () => {
-  return (
+const PrivacyPolicy = () => (
     <main className="max-w-4xl mx-auto px-6 pt-20 pb-16 md:py-24 text-black">
       {/* パンくず */}
       <Breadcrumb items={breadcrumbItems} />
@@ -146,7 +146,7 @@ const PrivacyPolicy = () => {
           <a
             href="https://automattic.com/privacy/"
             target="_blank"
-            className="underline text-blue-600"
+            className="underline text-blue-600" rel="noreferrer"
           >
             https://automattic.com/privacy/
           </a>{' '}
@@ -214,6 +214,5 @@ const PrivacyPolicy = () => {
       </section>
     </main>
   );
-};
 
 export default PrivacyPolicy;

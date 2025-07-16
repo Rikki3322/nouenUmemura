@@ -1,14 +1,13 @@
 'use client';
 
+import { Button } from '@/app/ui/button';
 import {
   Instagram,
   MessageCircle,
   Mountain,
 } from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
 
-const NohakuCTAbutton = () => {
-  return (
+const NohakuCTAbutton = () => (
     <div className="bg-white">
       {/* Fixed Button - Desktop */}
       <div className="hidden lg:block fixed right-6 top-1/2 transform -translate-y-1/2 z-50">
@@ -52,6 +51,5 @@ const NohakuCTAbutton = () => {
       </div>
     </div>
   );
-};
 
 export default NohakuCTAbutton;

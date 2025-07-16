@@ -1,10 +1,9 @@
 'use client';
 
-import NohakuSection from './NohakuSection';
 import NohakuCTAbutton from './NohakuCTAbutton';
+import NohakuSection from './NohakuSection';
 
-const NohakuSectionPage = () => {
-  return (
+const NohakuSectionPage = () => (
     <div>
       <main>
         <NohakuSection />
@@ -12,6 +11,5 @@ const NohakuSectionPage = () => {
       </main>
     </div>
   );
-};
 
 export default NohakuSectionPage;

@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Calendar } from '@/components/icons/lucide-icons';
-import { Button } from '@/app/ui/button';
 
-const HeroSection = () => {
-  return (
+import { Button } from '@/app/ui/button';
+import { Calendar } from '@/components/icons/lucide-icons';
+
+const HeroSection = () => (
     <section id="hero" className="bg-white mb-10">
       <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row items-center md:items-stretch gap-2">
         {/* 左側：画像（2/3幅） */}
@@ -42,6 +42,5 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
 
 export default HeroSection;

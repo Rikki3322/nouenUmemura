@@ -1,8 +1,9 @@
 'use client';
 
-import { cn } from '@/utils/cn';
-import { Button } from '@/app/ui/button';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@/app/ui/button';
+import { cn } from '@/utils/cn';
 
 type TabType = 'immediate' | 'scheduled' | 'subscription';
 

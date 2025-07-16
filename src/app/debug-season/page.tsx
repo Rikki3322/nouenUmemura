@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { seasonConfig, SeasonConfigItem } from '@/data/season-config';
-import { seasonalContents_ja } from '@/data/seasonal-contents.ja';
-import type { SeasonalContent } from '@/data/seasonal-contents';
-import UrgencySection from '@/components/sections/UrgencySection';
+
 import ActionSection from '@/components/sections/ActionSection/ActionSection';
 import FinalPushSection from '@/components/sections/FinalPushSection';
+import UrgencySection from '@/components/sections/UrgencySection';
+import { seasonConfig, SeasonConfigItem } from '@/data/season-config';
+import type { SeasonalContent } from '@/data/seasonal-contents';
+import { seasonalContents_ja } from '@/data/seasonal-contents.ja';
 
 const DebugSeasonPage = () => {
   const today = new Date();

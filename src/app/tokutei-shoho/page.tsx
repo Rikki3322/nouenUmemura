@@ -2,14 +2,12 @@
 
 import TokuteiShoho from './TokuteiShoho';
 
-const TokuteiShohoPage = () => {
-  return (
+const TokuteiShohoPage = () => (
     <div>
       <main>
         <TokuteiShoho />
       </main>
     </div>
   );
-};
 
 export default TokuteiShohoPage;

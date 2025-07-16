@@ -1,8 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 
-const FoodSection = () => {
-  return (
+const FoodSection = () => (
     <div className="bg-white">
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,6 +91,5 @@ const FoodSection = () => {
       </section>
     </div>
   );
-};
 
 export default FoodSection;

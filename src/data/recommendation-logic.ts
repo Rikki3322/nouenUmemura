@@ -1,5 +1,5 @@
-import { Answers, AnswerKey } from '@/types/recommendation-types';
 import { getEcSites } from '@/data/ec-sites';
+import { AnswerKey, Answers } from '@/types/recommendation-types';
 
 export const questions: { id: AnswerKey; text: string }[] = [
   { id: 'subscription', text: '定期便を希望しますか？' },
@@ -11,7 +11,7 @@ export const questions: { id: AnswerKey; text: string }[] = [
 
 const sites = getEcSites();
 
-export function recommendSite(answers: Answers) {
+export const recommendSite = (answers: Answers) => {
   const rakuten = sites.find((site) => site.name.includes('楽天'));
   const tabechoku = sites.find((site) => site.name === '食べチョク');
   const base = sites.find((site) => site.name === 'BASE');
@@ -24,4 +24,4 @@ export function recommendSite(answers: Answers) {
   if (answers.points === 'yes' && rakuten) return rakuten;
 
   return base ?? sites[0];
-}
+};

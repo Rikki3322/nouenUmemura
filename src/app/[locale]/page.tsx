@@ -1,22 +1,24 @@
 'use client';
 
-import { getCurrentSeasonalContent } from '@/utils/season-detector';
-import { useSeasonalContents } from '@/data/useSeasonalContents';
 import React from 'react';
-import CTAbutton from '../../components/sections/CTAbutton';
-import Header from '../../components/layout/Header';
-import HeroSection from '../../components/sections/HeroSection';
-import UrgencySection from '../../components/sections/UrgencySection';
-import ProblemSection from '../../components/sections/ProblemSection';
-import SolutionSection from '../../components/sections/SolutionSection';
-import ValueProofSection from '../../components/sections/ValueProofSection';
-import EmotionalValueSection from '../../components/sections/EmotionalValueSection';
-import RiskReductionSection from '../../components/sections/RiskReductionSection';
-import PriceJustificationSection from '../../components/sections/PriceJustificationSection';
-import ActionSection from '../../components/sections/ActionSection/ActionSection';
-import FinalPushSection from '../../components/sections/FinalPushSection';
-import FAQSection from '../../components/sections/FAQSection';
+
+import { useSeasonalContents } from '@/data/useSeasonalContents';
+import { getCurrentSeasonalContent } from '@/utils/season-detector';
+
 import Footer from '../../components/layout/Footer';
+import Header from '../../components/layout/Header';
+import ActionSection from '../../components/sections/ActionSection/ActionSection';
+import CTAbutton from '../../components/sections/CTAbutton';
+import EmotionalValueSection from '../../components/sections/EmotionalValueSection';
+import FAQSection from '../../components/sections/FAQSection';
+import FinalPushSection from '../../components/sections/FinalPushSection';
+import HeroSection from '../../components/sections/HeroSection';
+import PriceJustificationSection from '../../components/sections/PriceJustificationSection';
+import ProblemSection from '../../components/sections/ProblemSection';
+import RiskReductionSection from '../../components/sections/RiskReductionSection';
+import SolutionSection from '../../components/sections/SolutionSection';
+import UrgencySection from '../../components/sections/UrgencySection';
+import ValueProofSection from '../../components/sections/ValueProofSection';
 
 const HomePage = () => {
   const seasonStatus = getCurrentSeasonalContent();

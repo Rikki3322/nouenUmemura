@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from '@/components/icons/lucide-icons';
 import Image from 'next/image';
-import { Button } from '@/app/ui/button';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
+import React, { useEffect,useState } from 'react';
+
+import { Button } from '@/app/ui/button';
+import { Menu, X } from '@/components/icons/lucide-icons';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Header = () => {

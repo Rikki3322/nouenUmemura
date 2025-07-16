@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+
 import {
   Instagram,
-  ShoppingBasket,
   MessageCircle,
+  ShoppingBasket,
 } from '@/components/icons/lucide-icons';
 
 const CTAbutton = () => {
