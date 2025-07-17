@@ -134,9 +134,9 @@ const EcSitesPage: React.FC = () => {
                 {t('result.title')}
               </h3>
               <p className="mb-2 font-medium text-green-700">
-                {recommended.name}
+                {t(recommended.name)}
               </p>
-              <p className="mb-4">{recommended.description}</p>
+              <p className="mb-4">{t(recommended.description)}</p>
               <a
                 href={recommended.url}
                 target="_blank"
@@ -177,12 +177,18 @@ const EcSitesPage: React.FC = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="font-semibold text-lg mb-4">{site.name}</h3>
-                <p className="text-gray-700 mb-4">{site.description}</p>
+                {/* ✅ 翻訳関数を使う */}
+                <h3 className="font-semibold text-lg mb-4">{t(site.name)}</h3>
+                <p className="text-gray-700 mb-4">{t(site.description)}</p>
+
                 <div className="text-gray-700 mb-12 space-y-1 text-sm">
                   {Object.entries(site.badge).map(([key, value]) => {
                     if (!value) return null;
+
+                    // ✅ ラベルと値の両方を翻訳
                     const label = t(`badges.${key}`);
+                    const badgeValue = t(value); // ← ここも翻訳キーなので t() が必要
+
                     return (
                       <div key={key} className="flex items-start gap-1.5">
                         <Check
@@ -191,7 +197,7 @@ const EcSitesPage: React.FC = () => {
                         />
                         <span>
                           <span className="font-semibold">{label}：</span>
-                          {value}
+                          {badgeValue}
                         </span>
                       </div>
                     );

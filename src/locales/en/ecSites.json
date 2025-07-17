@@ -6,7 +6,7 @@
   "title": "List of Purchase Sites",
   "description": "Let us help you find the best site for your needs.",
   "form": {
-    "title": "Answer {{count}} questions to see our recommendation",
+    "title": "Answer {count} questions to see our recommendation",
     "aria": "Recommendation questionnaire form",
     "yes": "Yes",
     "no": "No",

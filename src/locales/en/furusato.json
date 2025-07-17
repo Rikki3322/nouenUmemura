@@ -11,8 +11,7 @@
   },
   "section2": {
     "title": "Save on taxes and get asparagus!",
-    "body": "Normally, donations to local governments are partially tax-deductible through income and resident tax returns.\nHowever, with the Furusato Tax system, the full donation amount (minus a ¥2,000 personal contribution) is eligible for deduction.\n*The deduction limit varies depending on your income.\nFor details, please visit {link}.",
-    "linkText": "Official Ministry of Internal Affairs site"
+    "body": "Normally, donations to local governments are partially tax-deductible through income and resident tax returns.\nHowever, with the Furusato Tax system, the full donation amount (minus a ¥2,000 personal contribution) is eligible for deduction.\n*The deduction limit varies depending on your income.\nFor details, please visit <link>Official Ministry of Internal Affairs site</link>."
   },
   "section3": {
     "title": "Your donation empowers local communities",

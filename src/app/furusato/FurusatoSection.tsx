@@ -52,17 +52,16 @@ const FurusatoPage = () => {
         </h2>
         <p className="leading-relaxed whitespace-pre-line">
           {t.rich('section2.body', {
-            link: (children: React.ReactNode) =>
-              (
-                <a
-                  href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/about/"
-                  className="underline hover:text-blue-800"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {children}
-                </a>
-              ) as any,
+            link: (chunks) => (
+              <a
+                href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/about/"
+                className="underline hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {chunks}
+              </a>
+            ),
           })}
         </p>
       </div>
