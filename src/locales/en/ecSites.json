@@ -33,5 +33,37 @@
     "flexibleAmount": "Would you like to adjust the quantity flexibly?",
     "freeShipping": "Do you prioritize free shipping?",
     "points": "Do you care about point rewards (e.g., Rakuten Points)?"
+  },
+  "base": {
+    "name": "BASE",
+    "badge": {
+      "immediate": "Shipping starts as soon as the harvest is ready. Only delivery time can be specified."
+    },
+    "description": "Delivered refrigerated via Yu-Pack (60 size). Gift wrapping and message cards available."
+  },
+  "pokemaru": {
+    "name": "PokéMarche",
+    "badge": {
+      "immediate": "Ships within 1–3 days after ordering",
+      "scheduled": "Delivery date can be specified"
+    },
+    "description": "Delivered by Yamato refrigerated courier in partnership with PokéMarche. Coupons available."
+  },
+  "tabechoku": {
+    "name": "Tabechoku",
+    "badge": {
+      "immediate": "Ships immediately",
+      "scheduled": "Delivery on specified date",
+      "subscription": "Some products are eligible for subscription"
+    },
+    "description": "Offers both one-time orders and subscriptions (for some items). Delivered via Yamato Cool Delivery (refrigerated)."
+  },
+  "rakuten": {
+    "name": "Rakuten (Furusato Tax Donation)",
+    "badge": {
+      "immediate": "Will be shipped in order once the available shipping period begins",
+      "subscription": "Ships from Imari City 2–3 weeks after payment confirmation"
+    },
+    "description": "Choose one-time delivery of 500g or 1kg, or a 4-time subscription. Free shipping included."
   }
 }

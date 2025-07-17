@@ -1,4 +1,5 @@
 import contactForm from './contactForm.json';
+import debugSeason from './debugSeason.json';
 import Footer from './Footer.json';
 import Header from './Header.json';
 import ecSites from './ecSites.json';
@@ -69,6 +70,7 @@ export default {
     cta: stayCTA,
   },
   contactForm,
+  debugSeason,
   Footer,
   Header,
   ecSites,

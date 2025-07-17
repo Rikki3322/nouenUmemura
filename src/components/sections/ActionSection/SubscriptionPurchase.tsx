@@ -20,6 +20,7 @@ const SubscriptionPurchase = ({
   currentContent,
 }: SubscriptionPurchaseProps) => {
   const t = useTranslations('homepage.subscriptionPurchase');
+  const ecT = useTranslations('ecSites'); // ecSites用の翻訳取得関数を追加
 
   const filteredSites = ecSites.filter((site) => {
     if (
@@ -28,7 +29,7 @@ const SubscriptionPurchase = ({
     ) {
       return site.id === 3; // 楽天のみ
     }
-    return site.id === 2 || site.id === 3; // 楽天 & BASE
+    return site.id === 2 || site.id === 3; // 食べチョク & 楽天
   });
 
   return (
@@ -68,7 +69,7 @@ const SubscriptionPurchase = ({
               >
                 <div className="flex flex-col items-center gap-1 relative z-10">
                   {/* 背景画像 */}
-                  <div className="absolute top-[-130] left-[-100] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
+                  <div className="absolute top-[-130px] left-[-100px] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
                     <Image
                       src={site.imagePath}
                       alt=""
@@ -77,13 +78,13 @@ const SubscriptionPurchase = ({
                     />
                   </div>
                   <span className="text-sm mb-2 block relative z-10">
-                    {site.name}
+                    {ecT(site.name)}
                   </span>
                   {site.badge.subscription && (
                     <span
                       className={`rounded px-2 py-0.5 text-xs ${site.color} relative z-10`}
                     >
-                      {site.badge.subscription}
+                      {ecT(site.badge.subscription)}
                     </span>
                   )}
                 </div>

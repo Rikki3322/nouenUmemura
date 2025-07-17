@@ -18,9 +18,10 @@ interface ScheduledPurchaseProps {
 
 const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
   const t = useTranslations('homepage.scheduledPurchase');
+  const ecT = useTranslations('ecSites'); // ecSites用の翻訳取得関数
 
   return (
-    <div className="rounded-xl  bg-white p-6">
+    <div className="rounded-xl bg-white p-6">
       <div className="mb-4">
         <div className="flex gap-2 mb-2">
           {currentContent.season !== 'off' && (
@@ -36,7 +37,7 @@ const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
       {currentContent.season !== 'off' && (
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:justify-center gap-3 mb-4">
           {ecSites
-            .filter((site) => site.id === 1 || site.id === 2) // ここでフィルタリング
+            .filter((site) => site.id === 1 || site.id === 2) // フィルター
             .map((site) => (
               <Link
                 key={site.id}
@@ -49,9 +50,9 @@ const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
                   variant="outline"
                   className="cursor-pointer hover:shadow-md hover:opacity-90 transition w-full h-[120px] flex flex-col justify-center items-center text-xs text-center whitespace-normal break-words px-4 py-2 relative overflow-hidden"
                 >
-                  <div className="flex flex-col items-center gap-1 relative z-1">
-                    {/* 背景画像（一部を表示） */}
-                    <div className="absolute top-[-130] left-[-100] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
+                  <div className="flex flex-col items-center gap-1 relative z-10">
+                    {/* 背景画像（一部表示） */}
+                    <div className="absolute top-[-130px] left-[-100px] z-10 w-60 h-60 rounded overflow-hidden opacity-20">
                       <Image
                         src={site.imagePath}
                         alt=""
@@ -60,15 +61,15 @@ const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
                       />
                     </div>
 
-                    <span className="text-sm mb-2 block  relative z-10">
-                      {site.name}
+                    <span className="text-sm mb-2 block relative z-10">
+                      {ecT(site.name)}
                     </span>
 
                     {site.badge.scheduled && (
                       <span
                         className={`rounded px-2 py-0.5 text-xs ${site.color} relative z-10`}
                       >
-                        {site.badge.scheduled}
+                        {ecT(site.badge.scheduled)}
                       </span>
                     )}
                   </div>
@@ -78,7 +79,7 @@ const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
         </div>
       )}
 
-      <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+      <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center rounded-lg">
         <RandomDishImage className="w-full h-full object-cover" />
       </div>
     </div>

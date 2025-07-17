@@ -19,6 +19,7 @@ interface ImmediatePurchaseProps {
 
 const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
   const t = useTranslations('homepage.immediatePurchase');
+  const ecT = useTranslations('ecSites'); // 追加：ecSites用の翻訳
 
   return (
     <div className="rounded-xl bg-white p-6">
@@ -55,13 +56,13 @@ const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
                       />
                     </div>
                     <span className="text-sm mb-2 block relative z-10">
-                      {site.name}
+                      {ecT(site.name)}
                     </span>
                     {site.badge.immediate && (
                       <span
                         className={`rounded px-2 py-0.5 text-xs ${site.color} relative z-10`}
                       >
-                        {site.badge.immediate}
+                        {ecT(site.badge.immediate)}
                       </span>
                     )}
                   </div>

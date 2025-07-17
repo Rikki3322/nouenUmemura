@@ -1,74 +1,64 @@
 export type ECInfo = {
   id: number;
-  name: string;
+  name: string; // 翻訳キー
   url: string;
   imagePath: string;
   badge: {
-    immediate?: string; // 即納
-    scheduled?: string; // 納期指定
-    subscription?: string; // 定期購買
+    immediate?: string; // 翻訳キー
+    scheduled?: string; // 翻訳キー
+    subscription?: string; // 翻訳キー
   };
   color: string;
-  description: string;
+  description: string; // 翻訳キー
 };
 
 export const getEcSites = (): ECInfo[] => [
   {
     id: 0,
-    name: 'BASE',
+    name: 'base.name',
     url: 'https://umemuranouen.base.ec/',
     imagePath: '/assets/images/ecSites/001.png',
     badge: {
-      immediate:
-        '発送は順次（獲れたてを当日中に発送）お届け時間のみ指定できます。',
-      scheduled: undefined,
-      subscription: undefined,
+      immediate: 'base.badge.immediate',
     },
     color: 'bg-blue-100 text-blue-800',
-    description:
-      'チルドゆうパック60サイズの冷蔵でお届け。のし紙・メッセージカードお入れできます。',
+    description: 'base.description',
   },
   {
     id: 1,
-    name: 'ポケマル',
+    name: 'pokemaru.name',
     url: 'https://poke-m.com/producers/794979',
     imagePath: '/assets/images/ecSites/002.png',
     badge: {
-      immediate: '注文から発送まで1～3日',
-      scheduled: 'お届け日指定',
-      subscription: undefined,
+      immediate: 'pokemaru.badge.immediate',
+      scheduled: 'pokemaru.badge.scheduled',
     },
     color: 'bg-yellow-100 text-yellow-800',
-    description:
-      'ポケマル提携のヤマト冷蔵便でのお届け。ポケマルクーポン利用可。',
+    description: 'pokemaru.description',
   },
   {
     id: 2,
-    name: '食べチョク',
-
+    name: 'tabechoku.name',
     url: 'https://www.tabechoku.com/producers/29043/products',
     imagePath: '/assets/images/ecSites/003.png',
     badge: {
-      immediate: 'すぐに出荷',
-      scheduled: '日付指定お届け',
-      subscription: '一部商品が定期購入の対象です',
+      immediate: 'tabechoku.badge.immediate',
+      scheduled: 'tabechoku.badge.scheduled',
+      subscription: 'tabechoku.badge.subscription',
     },
     color: 'bg-green-100 text-green-800',
-    description:
-      '通常の注文と定期購入（一部商品）があります。ヤマト運輸クール便（冷蔵）でお届け',
+    description: 'tabechoku.description',
   },
   {
     id: 3,
-    name: '楽天市場（ふるさと納税）',
-
+    name: 'rakuten.name',
     url: 'https://item.rakuten.co.jp/f412058-imari/10001970/',
     imagePath: '/assets/images/ecSites/004.png',
     badge: {
-      immediate: '発送可能時期より順次発送予定',
-      scheduled: undefined,
-      subscription: '入金確認から2～3週間後に伊万里市から発送',
+      immediate: 'rakuten.badge.immediate',
+      subscription: 'rakuten.badge.subscription',
     },
     color: 'bg-red-100 text-red-800',
-    description: '500gの1回購入または1kgの1回or4回購入。送料は無料です。',
+    description: 'rakuten.description',
   },
 ];
