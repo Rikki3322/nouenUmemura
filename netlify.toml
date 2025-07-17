@@ -1,9 +1,8 @@
 [build]
   command = "npm run build"
-  publish = ".next"
 
 [[plugins]]
-  package = "@netlify/next"  # ← App Router 対応の公式推奨パッケージ
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
