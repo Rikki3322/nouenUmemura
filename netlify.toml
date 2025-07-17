@@ -3,10 +3,16 @@
   publish = ".next"
 
 [[plugins]]
-   package = "@netlify/plugin-nextjs"
+  package = "@netlify/next"  # ← App Router 対応の公式推奨パッケージ
 
 [[headers]]
   for = "/*"
   [headers.values]
     Basic-Auth = "guest nouensaga"
     Status = "401"
+
+# ✅ リダイレクト設定: i18n の defaultLocale にリダイレクト
+[[redirects]]
+  from = "/"
+  to = "/ja"
+  status = 302
