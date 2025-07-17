@@ -8,7 +8,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Record<string, string>;
 }) {
   const messages = await getMessages({ locale: params.locale });
 
