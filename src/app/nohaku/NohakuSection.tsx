@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale,useTranslations } from 'next-intl';
 
 import { Hammer, Mountain, Sparkles } from '@/components/icons/lucide-icons';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';

@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
 
 import { Button } from '@/app/ui/button';
 import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';

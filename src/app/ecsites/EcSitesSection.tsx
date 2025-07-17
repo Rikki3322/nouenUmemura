@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
+import { useLocale,useTranslations } from 'next-intl';
 import React, { useEffect, useRef, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
 
 import { Button } from '@/app/ui/button';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';

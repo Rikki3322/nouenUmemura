@@ -1,12 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@/app/ui/button';
 import {
   Instagram,
   MessageCircle,
   ShoppingBasket,
 } from '@/components/icons/lucide-icons';
-import { useTranslations } from 'next-intl';
 
 const FurusatoCTAbutton = () => {
   const t = useTranslations('furusato');

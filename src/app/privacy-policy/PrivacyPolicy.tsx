@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale,useTranslations } from 'next-intl';
 
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 

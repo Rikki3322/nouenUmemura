@@ -1,12 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@/app/ui/button';
 import {
   Instagram,
   MessageCircle,
   Mountain,
 } from '@/components/icons/lucide-icons';
-import { useTranslations } from 'next-intl';
 
 const NohakuCTAbutton = () => {
   const t = useTranslations('nohaku');

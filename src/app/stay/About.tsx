@@ -1,12 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { Instagram } from '@/components/icons/lucide-icons';
-
-import { useTranslations } from 'next-intl';
 
 const AboutSection = () => {
   const t = useTranslations('stay.about');

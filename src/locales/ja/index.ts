@@ -1,13 +1,9 @@
 import contactForm from './contactForm.json';
 import debugSeason from './debugSeason.json';
-import Footer from './Footer.json';
-import Header from './Header.json';
 import ecSites from './ecSites.json';
+import Footer from './Footer.json';
 import furusato from './furusato.json';
-import nohaku from './nohaku.json';
-import privacyPolicy from './privacyPolicy.json';
-import tokuteiShoho from './tokuteiShoho.json';
-
+import Header from './Header.json';
 // homepage フォルダ内のインポート
 import action from './homepage/action.json';
 import cta from './homepage/cta.json';
@@ -26,17 +22,19 @@ import subscriptionPurchase from './homepage/subscriptionPurchase.json';
 import tabSelector from './homepage/tabSelector.json';
 import urgency from './homepage/urgency.json';
 import valueProof from './homepage/valueProof.json';
-
+import nohaku from './nohaku.json';
+import privacyPolicy from './privacyPolicy.json';
 // stay フォルダ内のインポート
 import stayAbout from './stay/about.json';
 import stayAccess from './stay/access.json';
 import stayAmenities from './stay/amenities.json';
+import stayCTA from './stay/cta.json';
 import stayExperience from './stay/experience.json';
 import stayFAQSection from './stay/FAQSection.json';
 import stayFood from './stay/food.json';
 import stayHero from './stay/hero.json';
 import stayRoom from './stay/room.json';
-import stayCTA from './stay/cta.json';
+import tokuteiShoho from './tokuteiShoho.json';
 
 export default {
   homepage: {

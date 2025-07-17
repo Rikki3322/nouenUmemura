@@ -1,15 +1,15 @@
 'use client';
 
+import { useLocale,useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
 
 import ActionSection from '@/components/sections/ActionSection/ActionSection';
 import FinalPushSection from '@/components/sections/FinalPushSection';
 import UrgencySection from '@/components/sections/UrgencySection';
 import { seasonConfig, SeasonConfigItem } from '@/data/season-config';
 import type { SeasonalContent } from '@/data/seasonal-contents';
-import { seasonalContents_ja } from '@/data/seasonal-contents.ja';
 import { seasonalContents_en } from '@/data/seasonal-contents.en'; // ← 英語版が必要
+import { seasonalContents_ja } from '@/data/seasonal-contents.ja';
 
 const DebugSeasonPage = () => {
   const t = useTranslations('debugSeason');

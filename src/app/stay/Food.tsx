@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 const FoodSection = () => {
   const t = useTranslations('stay.food');

@@ -1,0 +1,6 @@
+{
+  "error": {
+    "noSeason": "Failed to retrieve the current season information.",
+    "noContent": "No content found for the current season."
+  }
+}
