@@ -36,7 +36,7 @@ export default defineConfig([
     },
     rules: {
       // React 推奨ルールを展開
-      ...tseslint.configs.recommended,
+      // ...tseslint.configs.recommended,
 
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
