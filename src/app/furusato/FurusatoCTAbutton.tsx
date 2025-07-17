@@ -6,8 +6,12 @@ import {
   MessageCircle,
   ShoppingBasket,
 } from '@/components/icons/lucide-icons';
+import { useTranslations } from 'next-intl';
 
-const FurusatoCTAbutton = () => (
+const FurusatoCTAbutton = () => {
+  const t = useTranslations('furusato');
+
+  return (
     <div className="bg-white">
       {/* Fixed Button - Desktop */}
       <div className="hidden lg:block fixed right-6 top-1/2 transform -translate-y-1/2 z-50">
@@ -35,7 +39,7 @@ const FurusatoCTAbutton = () => (
         >
           <ShoppingBasket size={20} />
           <span className="font-medium text-sm writing-mode-vertical-rl text-orientation-mixed">
-            楽天ふるさと納税
+            {t('rakutenLabel')}
           </span>
         </a>
       </div>
@@ -45,11 +49,12 @@ const FurusatoCTAbutton = () => (
         <Button asChild variant="ctaFixed">
           <span>
             <ShoppingBasket size={20} />
-            ふるさと納税はこちら
+            {t('mobileButtonLabel')}
           </span>
         </Button>
       </div>
     </div>
   );
+};
 
 export default FurusatoCTAbutton;

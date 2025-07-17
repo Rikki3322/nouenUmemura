@@ -15,7 +15,7 @@ import {
 } from '@/components/icons/lucide-icons';
 
 const PriceJustificationSection = () => {
-  const t = useTranslations('priceJustification');
+  const t = useTranslations('homepage.priceJustification');
 
   return (
     <section className="py-12 bg-white">

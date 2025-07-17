@@ -1,0 +1,25 @@
+{
+  "heading": "A Home Surrounded by Fields and Mountains",
+  "subheading": "Welcome",
+  "address": "1375-2 Okawano, Okawa-cho, Imari City, Saga Prefecture",
+  "accessTitle": "How to Access",
+  "car": {
+    "title": "By Expressway",
+    "description": "1. Exit at 'Okawa Chuo IC' on the Ariake Sea Coastal Road.<br/>2. Continue onto National Route 497.<br/><br/>From the IC to the house is about 1.6 km (3–5 minutes by car).<br/>As it involves navigating local roads, we recommend using GPS or following posted signs."
+  },
+  "train": {
+    "title": "By Train from Hakata Station",
+    "description": "1. Take the JR Limited Express 'Midori' or 'Huis Ten Bosch'.<br/>Hakata Station → Shin-Tosu Station → Arita Station (approx. 1 hour 40 minutes)<br/>2. Transfer to the Matsuura Railway Nishi-Kyushu Line.<br/>Arita Station → Imari Station (approx. 25 minutes)<br/><br/>*Pick-up from Imari Station may be available upon request."
+  },
+  "plane": {
+    "title": "From Saga Airport",
+    "description": "1. Head north on Airport Street (Route 49), then take Route 444.<br/>2. Connect to the Nishi-Kyushu Expressway via Takeo Minami IC.<br/>3. Exit at 'Okawa Chuo IC' and continue onto National Route 497.<br/><br/>From the IC to the house is about 1.6 km (3–5 minutes by car).<br/>As it involves navigating local roads, we recommend using GPS or following posted signs."
+  },
+  "tourTitle": "Local Attractions",
+  "sightseeing": {
+    "within20": "Within 20 minutes: Kyu-ragi Onsen, Sayo Lake Riverside Pool, Okawachiyama Pottery Village, Imari Beach",
+    "within30": "Within 30 minutes: Karatsu Castle, Arita Porcelain Park, Takeo Onsen, Ureshino Onsen, Matsuura Ichi Sake Brewery",
+    "within60": "Within 60 minutes: Huis Ten Bosch, Kujukushima Aquarium Umi Kirara, Kujukushima Zoo and Botanical Garden Mori Kirara",
+    "local": "In the Town: Bass fishing spots, Yodohime Shrine, Pear picking, holoholo café with home-roasted coffee beans"
+  }
+}

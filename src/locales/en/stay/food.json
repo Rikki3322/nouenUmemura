@@ -1,0 +1,29 @@
+{
+  "title": {
+    "line1": "Simple,",
+    "line2": "yet truly delicious meals"
+  },
+  "description": {
+    "main": "Rustic dishes made with local seasonal ingredients",
+    "sub": "Flavors that soothe the soul"
+  },
+  "details": {
+    "dinner": "Dinner: BBQ or hearth-style grilling (choose one)",
+    "breakfast": "Breakfast: Homemade flavors centered on local dishes",
+    "bringYourOwn": "Day-use BBQ with your own ingredients is also possible (charcoal fee: ¥1,000)"
+  },
+  "cards": {
+    "breakfast": {
+      "title": "Breakfast",
+      "description": "A healthy breakfast made with freshly harvested vegetables and local ingredients."
+    },
+    "bbq": {
+      "title": "BBQ featuring Imari beef",
+      "description": "Enjoy Imari beef and other fresh local ingredients."
+    },
+    "irori": {
+      "title": "Hearth-style grilling",
+      "description": "Taste the flavor of freshly grown ingredients from the local area."
+    }
+  }
+}

@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Button } from '@/app/ui/button';
 import { Menu, X } from '@/components/icons/lucide-icons';
@@ -17,13 +18,9 @@ const Header = () => {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations('Header');
+  const tNav = useTranslations('Header.nav');
 
   const switchTo = locale === 'ja' ? 'en' : 'ja';
-
-  const handleLanguageSwitch = () => {
-    const newPathname = `/${switchTo}${pathname.replace(/^\/(ja|en)/, '')}`;
-    router.push(newPathname);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,12 +35,12 @@ const Header = () => {
   const headerBg = isScrolled ? 'bg-white' : 'bg-transparent';
 
   const navLinks = [
-    { href: '/', label: t('nav.home') },
-    { href: '/stay', label: t('nav.stay') },
-    { href: '/ecsites', label: t('nav.ecsites') },
-    { href: '/furusato', label: t('nav.furusato') },
-    { href: '/nohaku', label: t('nav.nohaku') },
-    { href: '/contact', label: t('nav.contact') },
+    { href: `/${locale}`, label: tNav('home') },
+    { href: `/${locale}/stay`, label: tNav('stay') },
+    { href: `/${locale}/ecsites`, label: tNav('ecsites') },
+    { href: `/${locale}/furusato`, label: tNav('furusato') },
+    { href: `/${locale}/nohaku`, label: tNav('nohaku') },
+    { href: `/${locale}/contact`, label: tNav('contact') },
   ];
 
   return (
@@ -105,14 +102,14 @@ const Header = () => {
           <div className="pt-20 px-4">
             <nav className="flex flex-col space-y-4">
               {navLinks.map(({ href, label }) => (
-                <a
+                <Link
                   key={href}
                   href={href}
                   className="text-white text-lg font-medium hover:text-green-300 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {label}
-                </a>
+                </Link>
               ))}
 
               <Button

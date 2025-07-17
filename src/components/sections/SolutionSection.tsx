@@ -8,7 +8,7 @@ import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { Check } from '@/components/icons/lucide-icons';
 
 const SolutionSection = () => {
-  const t = useTranslations('solution');
+  const t = useTranslations('homepage.solution');
 
   const benefits = [t('benefit1'), t('benefit2'), t('benefit3'), t('benefit4')];
 

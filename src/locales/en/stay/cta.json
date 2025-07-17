@@ -1,0 +1,12 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "current": "Umemura Farm Stay"
+  },
+  "title": "Umemura Farm Stay",
+  "subtitle": "Experience life on a farm — stay like you live here.",
+  "reservation": {
+    "verticalText": "Reservation",
+    "ctaButton": "Book Now"
+  }
+}

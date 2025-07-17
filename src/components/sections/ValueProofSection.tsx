@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { Heart,Star, Trophy } from '@/components/icons/lucide-icons';
+import { Heart, Star, Trophy } from '@/components/icons/lucide-icons';
 
 const ValueProofSection = () => {
-  const t = useTranslations('valueProof');
+  const t = useTranslations('homepage.valueProof');
 
   const testimonials = [
     {

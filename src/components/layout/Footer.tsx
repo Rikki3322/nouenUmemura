@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 import {
@@ -20,13 +20,14 @@ import {
 
 const Footer = () => {
   const t = useTranslations('Footer');
+  const locale = useLocale();
 
   const quickLinks = [
-    { href: '/stay', label: t('quickLinks.stay') },
-    { href: '/ecsites', label: t('quickLinks.purchase') },
-    { href: '/furusato', label: t('quickLinks.furusato') },
-    { href: '/nohaku', label: t('quickLinks.nohaku') },
-    { href: '/contact', label: t('quickLinks.contact') },
+    { href: `/${locale}/stay`, label: t('quickLinks.stay') },
+    { href: `/${locale}/ecsites`, label: t('quickLinks.purchase') },
+    { href: `/${locale}/furusato`, label: t('quickLinks.furusato') },
+    { href: `/${locale}/nohaku`, label: t('quickLinks.nohaku') },
+    { href: `/${locale}/contact`, label: t('quickLinks.contact') },
   ];
 
   const isExternalLink = (url: string) => /^(https?:)?\/\//.test(url);
@@ -58,7 +59,6 @@ const Footer = () => {
                   href="https://line.me/R/ti/p/@890kprkl?oat_content=url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <MessageCircle size={16} />
                 </a>
@@ -66,7 +66,6 @@ const Footer = () => {
                   href="https://www.instagram.com/asparagus.saga/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <Instagram size={16} />
                 </a>
@@ -74,7 +73,6 @@ const Footer = () => {
                   href="https://www.facebook.com/UMEMURANOUEN/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <Facebook size={16} />
                 </a>
@@ -82,7 +80,6 @@ const Footer = () => {
                   href="https://x.com/saga_asparagus"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <Twitter size={16} />
                 </a>
@@ -90,7 +87,6 @@ const Footer = () => {
                   href="https://www.threads.com/@asparagus.saga"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <AtSign size={16} />
                 </a>
@@ -98,7 +94,6 @@ const Footer = () => {
                   href="https://www.youtube.com/channel/UC8xv35NH5BlXp3tV8iIUCeg"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <Youtube size={16} />
                 </a>
@@ -106,7 +101,6 @@ const Footer = () => {
                   href="https://www.tiktok.com/@asparagus.saga"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   <Music2 size={16} />
                 </a>
@@ -129,9 +123,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="text-green-600 flex-shrink-0" size={14} />
-                  <p className="text-gray-600 text-sm">
-                    {'080'}-{'5242'}-{'6581'}
-                  </p>
+                  <p className="text-gray-600 text-sm">080-5242-6581</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="text-green-600 flex-shrink-0" size={14} />
@@ -191,18 +183,18 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
               <p className="text-gray-600 text-sm">{t('copyright')}</p>
               <div className="flex space-x-4 text-sm">
-                <a
-                  href="/privacy-policy"
+                <Link
+                  href={`/${locale}/privacy-policy`}
                   className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   {t('privacy')}
-                </a>
-                <a
-                  href="/tokutei-shoho"
+                </Link>
+                <Link
+                  href={`/${locale}/tokutei-shoho`}
                   className="text-gray-600 hover:text-green-600 transition-colors"
                 >
                   {t('commerce')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

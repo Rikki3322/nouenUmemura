@@ -8,7 +8,7 @@ import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
 import { X } from '@/components/icons/lucide-icons';
 
 const ProblemSection = () => {
-  const t = useTranslations('problem');
+  const t = useTranslations('homepage.problem');
 
   return (
     <section className="py-4 md:py-12 bg-white">

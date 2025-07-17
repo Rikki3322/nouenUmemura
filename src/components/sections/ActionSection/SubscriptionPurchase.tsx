@@ -19,7 +19,7 @@ interface SubscriptionPurchaseProps {
 const SubscriptionPurchase = ({
   currentContent,
 }: SubscriptionPurchaseProps) => {
-  const t = useTranslations('subscriptionPurchase');
+  const t = useTranslations('homepage.subscriptionPurchase');
 
   const filteredSites = ecSites.filter((site) => {
     if (

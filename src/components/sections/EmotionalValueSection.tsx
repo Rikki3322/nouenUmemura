@@ -32,7 +32,7 @@ const IMAGES = [
 
 const EmotionalValueSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const t = useTranslations('emotionalValue');
+  const t = useTranslations('homepage.emotionalValue');
 
   useEffect(() => {
     const interval = setInterval(() => {

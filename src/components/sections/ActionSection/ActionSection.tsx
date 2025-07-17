@@ -27,7 +27,7 @@ const ActionSection: React.FC<ActionSectionProps> = ({
   seasonType,
   seasonal,
 }) => {
-  const t = useTranslations('action');
+  const t = useTranslations('homepage.action');
   const [activeTab, setActiveTab] = useState<TabType>('immediate');
 
   const renderContent = () => {

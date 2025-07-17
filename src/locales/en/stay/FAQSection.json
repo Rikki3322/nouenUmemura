@@ -1,0 +1,44 @@
+{
+  "title": "Frequently Asked Questions",
+  "description": {
+    "line1": "Here are answers to some of",
+    "line2": "our most frequently asked questions."
+  },
+  "contactPrompt": "If you have any other questions, feel free to contact us.",
+  "contactButton": "Contact Us",
+  "contactCtaLabel": "Go to contact page",
+  "faqs": [
+    {
+      "question": "Are bath towels, pajamas, and toothbrushes provided?",
+      "answer": "We kindly ask that you bring your own bath towels, pajamas, and toothbrushes. Basic amenities such as shampoo and conditioner are provided, so please rest assured."
+    },
+    {
+      "question": "Can we bring our own drinks?",
+      "answer": "Yes, you are welcome to bring your own drinks. We provide water and tea, but you may also bring alcohol or juice of your choice. There is also a convenience store about 20 minutes away by car."
+    },
+    {
+      "question": "What should we do about the futon?",
+      "answer": "You can lay out your futon at your own pace whenever you like. Please make yourself at home and relax."
+    },
+    {
+      "question": "Is it wheelchair accessible?",
+      "answer": "Unfortunately, as the house retains its traditional charm, it is not wheelchair accessible. We apologize for the inconvenience and appreciate your understanding."
+    },
+    {
+      "question": "Is there an onsen nearby?",
+      "answer": "There is an onsen called 'Kyuragi Onsen' about 15 minutes away by car. It is popular among locals and highly recommended."
+    },
+    {
+      "question": "Are there any tourist attractions?",
+      "answer": "There aren't many flashy attractions, but you can enjoy the beauty of the changing seasons and visit local sake breweries to experience the charm of the region."
+    },
+    {
+      "question": "Are meals prepared and cleaned up for us?",
+      "answer": "You will join the host and other guests in preparing and cleaning up meals together. It's a great way to make lasting memories of your trip."
+    },
+    {
+      "question": "What should I wear for the asparagus harvest experience?",
+      "answer": "As you’ll be walking on soil in the fields, please wear comfortable clothes and shoes that you don’t mind getting dirty. A hat and towel are also recommended!"
+    }
+  ]
+}

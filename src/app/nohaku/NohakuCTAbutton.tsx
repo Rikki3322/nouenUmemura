@@ -6,8 +6,12 @@ import {
   MessageCircle,
   Mountain,
 } from '@/components/icons/lucide-icons';
+import { useTranslations } from 'next-intl';
 
-const NohakuCTAbutton = () => (
+const NohakuCTAbutton = () => {
+  const t = useTranslations('nohaku');
+
+  return (
     <div className="bg-white">
       {/* Fixed Button - Desktop */}
       <div className="hidden lg:block fixed right-6 top-1/2 transform -translate-y-1/2 z-50">
@@ -35,7 +39,7 @@ const NohakuCTAbutton = () => (
         >
           <Mountain size={20} />
           <span className="font-medium text-sm writing-mode-vertical-rl text-orientation-mixed">
-            農泊を体験する
+            {t('desktopButtonLabel')}
           </span>
         </a>
       </div>
@@ -45,11 +49,12 @@ const NohakuCTAbutton = () => (
         <Button asChild variant="ctaFixed">
           <span>
             <Mountain size={20} />
-            農泊はこちら
+            {t('mobileButtonLabel')}
           </span>
         </Button>
       </div>
     </div>
   );
+};
 
 export default NohakuCTAbutton;

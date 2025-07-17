@@ -1,26 +1,20 @@
 'use client';
 
-import Image from 'next/image'; // ← 追加
-import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
 import { Button } from '@/app/ui/button';
 import { Menu, X } from '@/components/icons/lucide-icons';
 
-const t = useTranslations('Header');
-
-const links = [
-  { href: '/', label: t('nav.home') },
-  { href: '/stay', label: t('nav.stay') },
-  { href: '/ecsites', label: t('nav.ecsites') },
-  { href: '/furusato', label: t('nav.furusato') },
-  { href: '/nohaku', label: t('nav.nohaku') },
-  { href: '/contact', label: t('nav.contact') },
-];
-
 const ScrolledHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+
+  const t = useTranslations('Header');
+  const tNav = useTranslations('Header.nav');
+  const locale = useLocale();
 
   useEffect(() => {
     setHasMounted(true);
@@ -28,6 +22,15 @@ const ScrolledHeader = () => {
 
   const iconColor = 'text-gray-900';
   const headerBg = 'bg-white';
+
+  const navLinks = [
+    { href: `/${locale}`, label: tNav('home') },
+    { href: `/${locale}/stay`, label: tNav('stay') },
+    { href: `/${locale}/ecsites`, label: tNav('ecsites') },
+    { href: `/${locale}/furusato`, label: tNav('furusato') },
+    { href: `/${locale}/nohaku`, label: tNav('nohaku') },
+    { href: `/${locale}/contact`, label: tNav('contact') },
+  ];
 
   return (
     <>
@@ -49,7 +52,6 @@ const ScrolledHeader = () => {
         </Button>
 
         <div className="container mx-auto px-4 relative flex items-center justify-center h-full">
-          {/* ここにロゴをタップ可能にしたdivを置きます */}
           <div
             role="button"
             tabIndex={0}
@@ -73,7 +75,7 @@ const ScrolledHeader = () => {
         </div>
       </header>
 
-      {/* モバイルメニュー：初回描画時は表示しないことで SSR と一致させる */}
+      {/* モバイルメニュー */}
       {hasMounted && (
         <div
           className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 pt-20 px-6 transition-opacity duration-300 ${
@@ -83,25 +85,23 @@ const ScrolledHeader = () => {
           }`}
         >
           <nav className="flex flex-col space-y-4">
-            {[
-              { href: '/', text: 'トップページ' },
-              { href: '/stay', text: '農家民宿うめむら' },
-              { href: '/ecsites', text: '購入サイト一覧' },
-              { href: '/furusato', text: 'ふるさと納税' },
-              { href: '/nohaku', text: '農泊（準備中）' },
-              { href: '/contact', text: 'お問い合わせ' },
-            ].map(({ href, text }) => (
-              <a
-                key={text}
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
                 href={href}
                 className="text-white text-lg font-medium hover:text-green-300 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {text}
-              </a>
+                {label}
+              </Link>
             ))}
 
-            <Button>{t('lineFriend')}</Button>
+            <Button
+              variant="cta"
+              className="w-full min-h-[40px] text-sm font-semibold"
+            >
+              {t('lineFriend')}
+            </Button>
           </nav>
         </div>
       )}

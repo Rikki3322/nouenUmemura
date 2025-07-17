@@ -1,0 +1,17 @@
+{
+  "title": "Asparagus Harvesting Experience",
+  "season": "(March – October)",
+  "subtitle": "Enjoy seasonal farming experiences throughout the year.",
+  "asparagus": {
+    "alt": "Asparagus Harvesting Experience",
+    "title": "Meet nature in the morning mist.",
+    "body": "Harvesting in the morning dew will be an unforgettable memory.",
+    "period": "March – October"
+  },
+  "bbq": {
+    "alt": "Day-trip BBQ Experience",
+    "title": "Gather around the fire in Satoyama.",
+    "body": "A luxurious time in nature with your favorite ingredients.",
+    "note": "BBQ with your own ingredients allowed"
+  }
+}

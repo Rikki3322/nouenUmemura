@@ -20,7 +20,7 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
   seasonType,
   seasonal,
 }) => {
-  const t = useTranslations('finalPushSection');
+  const t = useTranslations('homepage.finalPushSection');
   const content = seasonal;
 
   return (

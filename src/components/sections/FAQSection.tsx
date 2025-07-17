@@ -8,7 +8,7 @@ import { Button } from '@/app/ui/button';
 import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 
 const FAQSection = () => {
-  const t = useTranslations('FAQSection');
+  const t = useTranslations('homepage.FAQSection');
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   // 多言語対応済みの質問・回答を t() で取得

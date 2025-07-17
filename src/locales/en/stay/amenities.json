@@ -1,0 +1,36 @@
+{
+  "heading": {
+    "line1": "Stay like you live,",
+    "line2": "at a farmhouse inn"
+  },
+  "description": {
+    "line1": "A peaceful place with a view of Mt. Yahata,",
+    "line2": "a 'just right' farmhouse stay."
+  },
+  "items": {
+    "bathroom": {
+      "title": "Bathroom & Toilet",
+      "description": "Shower, body soap, shampoo\nHair dryer, flush toilet with bidet"
+    },
+    "kitchen": {
+      "title": "Kitchen",
+      "description": "Refrigerator, microwave, electric kettle\nFrying pan, pots, plates, cups, tongs, chopsticks\nCutting board, knife, gas stove, dining table"
+    },
+    "laundry": {
+      "title": "Laundry & Linen",
+      "description": "Washing machine, drying rack, face towels, up to 5 futons"
+    },
+    "wifi": {
+      "title": "Internet",
+      "description": "Free Wi-Fi"
+    },
+    "parking": {
+      "title": "Parking",
+      "description": "On-site parking for 2 vehicles"
+    },
+    "checkin": {
+      "title": "Check-in",
+      "description": "Check-in from 16:00\n(Please contact us if after 19:00)\nCheck-out by 10:00"
+    }
+  }
+}

@@ -12,7 +12,7 @@ import {
 } from '@/components/icons/lucide-icons';
 
 const RiskReductionSection = () => {
-  const t = useTranslations('riskReduction');
+  const t = useTranslations('homepage.riskReduction');
 
   return (
     <section className="py-12 bg-white">

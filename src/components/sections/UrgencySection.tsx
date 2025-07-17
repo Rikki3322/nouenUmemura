@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { AlertTriangle,Gift } from '@/components/icons/lucide-icons';
+import { AlertTriangle, Gift } from '@/components/icons/lucide-icons';
 import { SeasonType } from '@/data/season-config';
 import { SeasonalContent } from '@/data/seasonal-contents';
 import { useSeasonalContents } from '@/data/useSeasonalContents';
@@ -19,7 +19,7 @@ const UrgencySection: React.FC<UrgencySectionProps> = ({
   seasonType,
   seasonal,
 }) => {
-  const t = useTranslations('urgency');
+  const t = useTranslations('homepage.urgency');
   const seasonalContents = useSeasonalContents();
 
   const content =

@@ -1,0 +1,98 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "title": "Privacy Policy",
+  "sections": {
+    "basicPolicy": {
+      "title": "Basic Policy",
+      "body": "This site recognizes the importance of personal information, considers it a social responsibility to protect it, complies with laws and regulations regarding personal information, and appropriately acquires, uses, and manages personal information handled on this site."
+    },
+    "definition": {
+      "title": "Definition of Personal Information",
+      "body": "In this privacy policy, 'personal information' refers to the information defined in Article 2, Paragraph 1 of the Act on the Protection of Personal Information, that is, information about a living individual that can identify a specific individual by name, date of birth, or other description included in the information (including information that can be easily compared with other information to identify a specific individual), or information that contains personal identification codes."
+    },
+    "scope": {
+      "title": "Scope of Application",
+      "body": "This privacy policy outlines the policies that this site follows when handling customers' personal information or similar information."
+    },
+    "purpose": {
+      "title": "Purpose of Use of Personal Information",
+      "items": [
+        "For identity verification",
+        "For confirming and responding to inquiries or comments",
+        "For sending newsletters, direct mail, and various notifications",
+        "For conducting campaigns, surveys, monitoring, and interviews",
+        "For providing, improving, developing, and marketing services",
+        "For providing personal information to affiliated businesses or organizations based on the customer's consent or application",
+        "For investigating prohibited activities under terms of use, etc.",
+        "For other purposes individually agreed upon"
+      ]
+    },
+    "businessInfo": {
+      "title": "Business Information",
+      "body": "Seller: Umemura Farm\nAddress: 1375-2 Okawano, Okawamachi, Imari City, Saga Prefecture, 849-5251 Japan\nRepresentative: Shinji Umemura"
+    },
+    "management": {
+      "title": "Management of Personal Information",
+      "body1": "This site implements thorough security measures to ensure the accuracy and safety of personal information, and takes necessary and appropriate safety measures against risks such as leakage, falsification, and unauthorized access.",
+      "body2": "To prevent important information from being read or tampered with by third parties, this site uses SSL encryption."
+    },
+    "thirdParty": {
+      "title": "Provision of Personal Information to Third Parties",
+      "body1": "This site will not provide personal information to third parties unless there is a legitimate reason, including the following:",
+      "items": [
+        "With the individual's consent",
+        "Based on laws and regulations",
+        "When necessary to protect life, body, or property",
+        "When necessary for public health or the sound development of children",
+        "When cooperating with government agencies in accordance with laws (such as tax investigations, statistical surveys, etc.)"
+      ],
+      "body2": "This site may entrust personal information to other businesses within the scope necessary to achieve the purpose of use."
+    },
+    "inquiry": {
+      "title": "Inquiries Regarding Personal Information",
+      "body": "If you request disclosure, correction, suspension of use, etc., we will respond based on the prescribed method. For details, please contact the address listed in the “Specified Commercial Transaction Act” on this site or use the inquiry form on the shop page."
+    },
+    "cookie": {
+      "title": "Cookies",
+      "body1": "Cookies are a mechanism for storing users' browsing history on their computer.",
+      "body2": "You can refuse the collection of cookies by disabling them in your browser settings. However, if you refuse cookies, some services and functions of this site may not work properly."
+    },
+    "analytics": {
+      "title": "Access Analytics",
+      "body": "This site uses Google Analytics provided by Google to analyze and improve the site. This service uses cookies to collect traffic data. The data is collected anonymously and does not identify individuals."
+    },
+    "comments": {
+      "title": "Comments and Inquiry Forms",
+      "body1": "This site collects data shown in comments and inquiry forms, as well as IP addresses and browser user agent strings to help detect spam.",
+      "body2": "An anonymized hash string created from your email address may be provided to the Gravatar service to check if you are using it.",
+      "body3": "Please refer to the Gravatar service's privacy policy at <a>https://automattic.com/privacy/</a>.",
+      "body4": "Once a comment is approved, the profile image will be publicly visible along with the comment.",
+      "body5": "We obtain personal information properly and do not obtain it through false or fraudulent means."
+    },
+    "embeddedContent": {
+      "title": "Embedded Content from Other Sites",
+      "body1": "This site may include embedded content (videos, images, posts, etc.). Embedded content from other sites behaves in the exact same way as if the visitor had visited the other site.",
+      "body2": "These sites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with the embedded content.",
+      "body3": "This includes tracking your interaction with the embedded content if you are logged in to that website using your account."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "body1": "This site strives to post accurate information, but does not guarantee the accuracy or safety of the content. We are not responsible for any damages caused by the content posted on this site.",
+      "body2": "We are also not responsible for any information or services provided on external sites linked or referred to from this site.",
+      "body3": "Prices listed on this site may be changed without notice."
+    },
+    "copyright": {
+      "title": "Copyright and Portrait Rights",
+      "body1": "All content (texts, images, videos, audio, files, etc.) on this site is the property of the site owner or respective rights holders. Unauthorized use (reproduction, transfer, secondary use, etc.) without permission is prohibited.",
+      "body2": "Modifying, altering, or editing the content is strictly prohibited.",
+      "body3": "If you are a rights holder and find any issues with the content, please contact us directly. We will respond promptly."
+    },
+    "links": {
+      "title": "Links",
+      "body": "This site is generally link-free. No permission or notification is required when linking. When quoting, please clearly indicate the source and link to the relevant page."
+    }
+  }
+}

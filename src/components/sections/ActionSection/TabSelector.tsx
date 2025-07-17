@@ -13,7 +13,7 @@ interface TabSelectorProps {
 }
 
 const TabSelector = ({ activeTab, onTabChange }: TabSelectorProps) => {
-  const t = useTranslations('tabSelector');
+  const t = useTranslations('homepage.tabSelector');
 
   const tabs = [
     { key: 'immediate' as const, label: t('immediate') },

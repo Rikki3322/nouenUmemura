@@ -1,0 +1,26 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "nohaku": "Farm Stay (Preparing)"
+  },
+  "title": "What is Farm Stay? (Under Preparation)",
+  "lead": "",
+  "section1": {
+    "title": "Farm Stay = Rural and Fishing Village Stay Travel",
+    "body": "Farm stay is a type of travel where you stay at a farm or fishing house and experience the local lifestyle, culture, and nature."
+  },
+  "section2": {
+    "title": "Preparing to Open Farm Stay!",
+    "body": "December is the off-season for asparagus. Currently, we are planning experiences for those interested in country living, nature activities,\nand agriculture.\nWe are busy every day searching for local delicious ingredients and maintaining the garden."
+  },
+  "section3": {
+    "title": "Wreath Making Experience with Natural Materials",
+    "body": "On sunny days, we handcraft decorations using vines and parsnip gourds found in the garden and mountains.\nSimply bundling them together creates a beautiful wreath.\nHow about trying a wreath making experience starting from gathering materials?"
+  },
+  "imageAlt": {
+    "001": "Work 001",
+    "002": "Work 002"
+  },
+  "desktopButtonLabel": "Experience Farm Stay",
+  "mobileButtonLabel": "Farm Stay Here"
+}

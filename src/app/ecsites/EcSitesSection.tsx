@@ -1,7 +1,7 @@
 'use client';
-
 import Image from 'next/image';
-import React, { useEffect,useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 import { Button } from '@/app/ui/button';
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
@@ -9,7 +9,7 @@ import { ArrowRight, Check } from '@/components/icons/lucide-icons';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { getEcSites } from '@/data/ec-sites';
 import { questions, recommendSite } from '@/data/recommendation-logic';
-import { AnswerKey,Answers } from '@/types/recommendation-types';
+import { AnswerKey, Answers } from '@/types/recommendation-types';
 
 const sites = getEcSites();
 
@@ -18,11 +18,11 @@ const EcSitesPage: React.FC = () => {
   const [showResult, setShowResult] = useState(false);
   const resultRef = useRef<HTMLDivElement | null>(null);
 
+  const t = useTranslations('ecSites');
+  const locale = useLocale();
+
   const handleChange = (key: AnswerKey, value: 'yes' | 'no') => {
-    setAnswers((prev) => ({
-      ...prev,
-      [key]: value,
-    }));
+    setAnswers((prev) => ({ ...prev, [key]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -33,11 +33,10 @@ const EcSitesPage: React.FC = () => {
     if (allAnswered) {
       setShowResult(true);
     } else {
-      alert('すべての質問に「はい」か「いいえ」でお答えください');
+      alert(t('alertIncomplete'));
     }
   };
 
-  // 結果表示時にスクロール
   useEffect(() => {
     if (showResult && resultRef.current) {
       resultRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -48,8 +47,8 @@ const EcSitesPage: React.FC = () => {
   const recommended = recommendSite(answers);
 
   const breadcrumbItems = [
-    { label: 'HOME', href: '/' },
-    { label: '購入先サイト一覧' },
+    { label: t('breadcrumb.home'), href: `/${locale}` },
+    { label: t('breadcrumb.current') },
   ];
 
   return (
@@ -58,25 +57,23 @@ const EcSitesPage: React.FC = () => {
 
       <div className="mb-12">
         <h1 className="text-4xl font-bold border-b border-black pb-4 mb-6">
-          購入先サイト一覧
+          {t('title')}
         </h1>
-        <h2 className="text-lg leading-relaxed">
-          あなたにおすすめのサイトを診断します
-        </h2>
+        <h2 className="text-lg leading-relaxed">{t('description')}</h2>
       </div>
 
       <section className="mb-12 p-6 border border-gray-300 rounded-lg shadow-sm bg-white">
         <h2 className="text-xl font-semibold mb-4">
-          {questions.length}つの質問に答えておすすめを確認する
+          {t('form.title', { count: questions.length })}
         </h2>
         <form
           onSubmit={handleSubmit}
           className="space-y-6"
-          aria-label="おすすめ診断質問フォーム"
+          aria-label={t('form.aria')}
         >
-          {questions.map(({ id, text }) => (
+          {questions.map(({ id }) => (
             <div key={id}>
-              <p className="mb-2 font-medium">{text}</p>
+              <p className="mb-2 font-medium">{t(`questions.${id}`)}</p>
               <div className="flex gap-6">
                 <label
                   className="inline-flex items-center cursor-pointer"
@@ -92,7 +89,7 @@ const EcSitesPage: React.FC = () => {
                     className="mr-2"
                     required
                   />
-                  はい
+                  {t('form.yes')}
                 </label>
                 <label
                   className="inline-flex items-center cursor-pointer"
@@ -108,19 +105,17 @@ const EcSitesPage: React.FC = () => {
                     className="mr-2"
                     required
                   />
-                  いいえ
+                  {t('form.no')}
                 </label>
               </div>
             </div>
           ))}
-
           <Button type="submit" className="mt-4 font-semibold" variant="cta">
-            おすすめをみる
+            {t('form.submit')}
           </Button>
         </form>
       </section>
 
-      {/* 結果表示領域 */}
       <div
         ref={resultRef}
         tabIndex={-1}
@@ -133,9 +128,11 @@ const EcSitesPage: React.FC = () => {
           <FadeInOnScroll>
             <section
               className="p-6 border border-green-400 rounded-lg bg-green-50"
-              aria-label="おすすめ結果"
+              aria-label={t('result.aria')}
             >
-              <h3 className="text-lg font-semibold mb-3">あなたへのおすすめ</h3>
+              <h3 className="text-lg font-semibold mb-3">
+                {t('result.title')}
+              </h3>
               <p className="mb-2 font-medium text-green-700">
                 {recommended.name}
               </p>
@@ -146,14 +143,13 @@ const EcSitesPage: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
               >
-                サイトを見る
+                {t('result.viewSite')}
               </a>
             </section>
           </FadeInOnScroll>
         )}
       </div>
 
-      {/* サイトカード一覧 */}
       <section>
         <Image
           src="/assets/images/border/003.png"
@@ -162,7 +158,7 @@ const EcSitesPage: React.FC = () => {
           height={100}
           className="w-full h-auto"
         />
-        <h2 className="text-xl font-semibold mb-6">すべての購入先サイト</h2>
+        <h2 className="text-xl font-semibold mb-6">{t('allSites.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sites.map((site) => (
             <a
@@ -172,7 +168,6 @@ const EcSitesPage: React.FC = () => {
               rel="noopener noreferrer"
               className="relative flex flex-col p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white group min-h-48 overflow-hidden"
             >
-              {/* オーバーレイ画像 */}
               <div className="absolute top-[-80px] left-[-60px] w-80 h-80 opacity-20 z-0 pointer-events-none">
                 <Image
                   src={site.imagePath || '/assets/images/border/003.png'}
@@ -181,32 +176,19 @@ const EcSitesPage: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-
-              {/* カード内容 */}
               <div className="relative z-10">
                 <h3 className="font-semibold text-lg mb-4">{site.name}</h3>
                 <p className="text-gray-700 mb-4">{site.description}</p>
-
                 <div className="text-gray-700 mb-12 space-y-1 text-sm">
                   {Object.entries(site.badge).map(([key, value]) => {
                     if (!value) return null;
-
-                    const label =
-                      key === 'immediate'
-                        ? 'すぐにお届け'
-                        : key === 'scheduled'
-                        ? 'お届け日指定'
-                        : key === 'subscription'
-                        ? '定期購入'
-                        : key;
-
+                    const label = t(`badges.${key}`);
                     return (
                       <div key={key} className="flex items-start gap-1.5">
                         <Check
                           className="text-green-400 flex-shrink-0 mt-1"
                           size={16}
                         />
-                        {/* チェックマーク */}
                         <span>
                           <span className="font-semibold">{label}：</span>
                           {value}
@@ -217,7 +199,7 @@ const EcSitesPage: React.FC = () => {
                 </div>
               </div>
               <span className="absolute bottom-4 left-6 inline-flex items-center text-green-600 font-semibold">
-                サイトを見る
+                {t('allSites.viewSite')}
                 <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
                   <ArrowRight className="w-5 h-5 text-green-600" />
                 </span>

@@ -18,7 +18,7 @@ interface ImmediatePurchaseProps {
 }
 
 const ImmediatePurchase = ({ currentContent }: ImmediatePurchaseProps) => {
-  const t = useTranslations('immediatePurchase');
+  const t = useTranslations('homepage.immediatePurchase');
 
   return (
     <div className="rounded-xl bg-white p-6">

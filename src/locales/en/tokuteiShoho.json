@@ -1,0 +1,27 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "pageTitle": "Legal Notice"
+  },
+  "pageTitle": "Legal Notice",
+  "table": {
+    "vendor": "Seller",
+    "vendorValue": "Umemura Farm",
+    "representative": "Representative",
+    "representativeValue": "Shinji Umemura",
+    "address": "Address",
+    "addressValue": "1375-2 Okawano, Okawamachi, Imari City, Saga 849-5251, Japan",
+    "phone": "Phone Number",
+    "phoneValue": "080-5242-6581",
+    "phoneNote": "For customers only. Please refrain from sales calls.",
+    "phoneReception": "Phone Reception Hours",
+    "phoneReceptionValue": "10:00 AM – 5:00 PM",
+    "businessHours": "Business Hours",
+    "businessHoursValue": "10:00 AM – 5:00 PM",
+    "holidays": "Holidays",
+    "holidaysValue": "Irregular",
+    "email": "Email Address",
+    "emailValue": "info@umemuranouen.com",
+    "siteUrl": "Website URL"
+  }
+}

@@ -1,16 +1,18 @@
 import { getEcSites } from '@/data/ec-sites';
 import { AnswerKey, Answers } from '@/types/recommendation-types';
 
-export const questions: { id: AnswerKey; text: string }[] = [
-  { id: 'subscription', text: '定期便を希望しますか？' },
-  { id: 'gift', text: 'ギフト用ですか？' },
-  { id: 'flexibleAmount', text: '分量を柔軟に相談しながら購入したいですか？' },
-  { id: 'freeShipping', text: '送料無料を重視しますか？' },
-  { id: 'points', text: 'ポイント還元（楽天ポイント）を重視しますか？' },
+// i18n対応：textを削除し、IDだけ保持する静的な質問リスト
+export const questions: { id: AnswerKey }[] = [
+  { id: 'subscription' },
+  { id: 'gift' },
+  { id: 'flexibleAmount' },
+  { id: 'freeShipping' },
+  { id: 'points' },
 ];
 
 const sites = getEcSites();
 
+// 回答に基づくおすすめサイトロジック
 export const recommendSite = (answers: Answers) => {
   const rakuten = sites.find((site) => site.name.includes('楽天'));
   const tabechoku = sites.find((site) => site.name === '食べチョク');

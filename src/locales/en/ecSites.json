@@ -1,0 +1,37 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "current": "List of Purchase Sites"
+  },
+  "title": "List of Purchase Sites",
+  "description": "Let us help you find the best site for your needs.",
+  "form": {
+    "title": "Answer {{count}} questions to see our recommendation",
+    "aria": "Recommendation questionnaire form",
+    "yes": "Yes",
+    "no": "No",
+    "submit": "See Recommendation"
+  },
+  "alertIncomplete": "Please answer all questions with 'Yes' or 'No'.",
+  "result": {
+    "aria": "Recommendation Result",
+    "title": "Our Recommendation for You",
+    "viewSite": "Visit Site"
+  },
+  "allSites": {
+    "title": "All Purchase Sites",
+    "viewSite": "Visit Site"
+  },
+  "badges": {
+    "immediate": "Fast Delivery",
+    "scheduled": "Scheduled Delivery",
+    "subscription": "Subscription Service"
+  },
+  "questions": {
+    "subscription": "Do you want a subscription plan?",
+    "gift": "Is this for a gift?",
+    "flexibleAmount": "Would you like to adjust the quantity flexibly?",
+    "freeShipping": "Do you prioritize free shipping?",
+    "points": "Do you care about point rewards (e.g., Rakuten Points)?"
+  }
+}

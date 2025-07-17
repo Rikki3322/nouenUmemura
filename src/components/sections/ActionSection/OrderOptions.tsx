@@ -10,7 +10,7 @@ import {
 } from '@/components/icons/lucide-icons';
 
 const OrderOptions = () => {
-  const t = useTranslations('orderOptions');
+  const t = useTranslations('homepage.orderOptions');
 
   return (
     <div className="pt-8">

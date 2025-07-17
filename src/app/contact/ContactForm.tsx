@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import React, { useState } from 'react';
 
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
 const ContactForm = () => {
-  const t = useTranslations('ContactForm');
+  const t = useTranslations('contactForm');
+  const locale = useLocale();
 
   const [form, setForm] = useState({
     name: '',
@@ -22,7 +23,7 @@ const ContactForm = () => {
   });
 
   const breadcrumbItems = [
-    { label: t('breadcrumb.home'), href: '/' },
+    { label: t('breadcrumb.home'), href: `/${locale}` },
     { label: t('breadcrumb.contact') },
   ];
 

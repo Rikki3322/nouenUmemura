@@ -17,7 +17,7 @@ interface ScheduledPurchaseProps {
 }
 
 const ScheduledPurchase = ({ currentContent }: ScheduledPurchaseProps) => {
-  const t = useTranslations('scheduledPurchase');
+  const t = useTranslations('homepage.scheduledPurchase');
 
   return (
     <div className="rounded-xl  bg-white p-6">

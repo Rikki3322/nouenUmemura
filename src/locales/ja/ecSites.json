@@ -1,0 +1,37 @@
+{
+  "breadcrumb": {
+    "home": "HOME",
+    "current": "購入先サイト一覧"
+  },
+  "title": "購入先サイト一覧",
+  "description": "あなたにおすすめのサイトを診断します",
+  "form": {
+    "title": "{{count}}つの質問に答えておすすめを確認する",
+    "aria": "おすすめ診断質問フォーム",
+    "yes": "はい",
+    "no": "いいえ",
+    "submit": "おすすめをみる"
+  },
+  "alertIncomplete": "すべての質問に「はい」か「いいえ」でお答えください",
+  "result": {
+    "aria": "おすすめ結果",
+    "title": "あなたへのおすすめ",
+    "viewSite": "サイトを見る"
+  },
+  "allSites": {
+    "title": "すべての購入先サイト",
+    "viewSite": "サイトを見る"
+  },
+  "badges": {
+    "immediate": "すぐにお届け",
+    "scheduled": "お届け日指定",
+    "subscription": "定期購入"
+  },
+  "questions": {
+    "subscription": "定期便を希望しますか？",
+    "gift": "ギフト用ですか？",
+    "flexibleAmount": "分量を柔軟に相談しながら購入したいですか？",
+    "freeShipping": "送料無料を重視しますか？",
+    "points": "ポイント還元（楽天ポイント）を重視しますか？"
+  }
+}
