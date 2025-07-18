@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/app/ui/button';
@@ -20,6 +21,7 @@ const SubscriptionPurchase = ({
   currentContent,
 }: SubscriptionPurchaseProps) => {
   const t = useTranslations('homepage.subscriptionPurchase');
+  const locale = useLocale();
   const ecT = useTranslations('ecSites'); // ecSites用の翻訳取得関数を追加
 
   const filteredSites = ecSites.filter((site) => {
@@ -98,8 +100,8 @@ const SubscriptionPurchase = ({
         <div className="border rounded-lg p-4">
           <div className="flex justify-between items-center">
             <h4 className="font-semibold">{t('furusatoTitle')}</h4>
-            <Link href="/furusato" passHref>
-              <Button size="sm" variant="outline">
+            <Link href={`/${locale}/furusato`}>
+              <Button size="sm" variant="outline" className="cursor-pointer">
                 {t('details')}
               </Button>
             </Link>

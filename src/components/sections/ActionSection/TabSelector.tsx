@@ -32,6 +32,7 @@ const TabSelector = ({ activeTab, onTabChange }: TabSelectorProps) => {
             className={cn(
               'w-[110px] sm:w-auto',
               'rounded-md px-4 py-2 text-sm font-medium',
+              'cursor-pointer',
               activeTab !== tab.key && 'text-gray-600 hover:text-gray-800'
             )}
           >

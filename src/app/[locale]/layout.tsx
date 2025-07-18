@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import type { ReactNode, ReactElement } from 'react';
+import type { ReactElement,ReactNode } from 'react';
 
 interface LocaleLayoutProps {
   children: ReactNode;

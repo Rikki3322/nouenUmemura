@@ -25,11 +25,11 @@ const HeroSection = () => {
         </div>
 
         {/* 右側：テキスト（1/3幅） */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center text-left md:text-right">
+        <div className="w-full md:w-1/2 flex flex-col justify-center md:text-right">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('heading')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-900 mt-4 text-left">
+          <p className="text-lg md:text-xl text-gray-900 mt-4">
             {t('description')}
           </p>
           <div className="mt-10 md:mt-20 flex justify-center">

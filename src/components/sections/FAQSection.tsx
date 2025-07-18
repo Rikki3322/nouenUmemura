@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
 import { Button } from '@/app/ui/button';
@@ -9,6 +9,7 @@ import { ChevronDown, ChevronUp } from '@/components/icons/lucide-icons';
 
 const FAQSection = () => {
   const t = useTranslations('homepage.FAQSection');
+  const locale = useLocale();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   // 多言語対応済みの質問・回答を t() で取得
@@ -94,7 +95,7 @@ const FAQSection = () => {
               className="text-sm min-h-[40px]"
               aria-label={t('contactButtonLabel')}
             >
-              <Link href="/contact">{t('contactButtonText')}</Link>
+              <Link href={`/${locale}/contact`}>{t('contactButtonText')}</Link>
             </Button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Button } from '@/app/ui/button';
 import {
@@ -11,6 +11,7 @@ import {
 
 const OrderOptions = () => {
   const t = useTranslations('homepage.orderOptions');
+  const locale = useLocale();
 
   return (
     <div className="pt-8">
@@ -25,7 +26,7 @@ const OrderOptions = () => {
           <p className="mb-4 text-sm text-muted-foreground">
             {t('onlineDesc')}
           </p>
-          <Link href="/ecsites" passHref>
+          <Link href={`/${locale}/ecsites`}>
             <Button
               className="w-full cursor-pointer hover:opacity-80 hover:shadow-md"
               variant="outline"

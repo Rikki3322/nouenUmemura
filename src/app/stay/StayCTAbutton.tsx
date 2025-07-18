@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale,useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/app/ui/button';
@@ -75,13 +75,16 @@ const StayCTAbutton = () => {
           href="https://www.booking.com/hotel/jp/nong-jia-min-su-umemura.ja.html"
           target="_blank"
           rel="noopener noreferrer"
-          className={`bg-green-600 hover:bg-green-700 text-white px-4 py-6 rounded-full shadow-lg transition-all duration-300 flex flex-col items-center gap-2 hover:shadow-xl"
-          ${
-            isEnglish(locale) ? 'w-auto max-w-[100px]' : ''
-          }  // 英語時は最大幅を設定
-          `}
+          className={`bg-green-600 hover:bg-green-700 text-white px-4 py-6 rounded-full shadow-lg transition-all duration-300 flex flex-col items-center gap-2 hover:shadow-xl`}
+          style={{
+            width: 56,
+            height: 150,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
         >
           <Calendar size={20} />
+
           {showVerticalText ? (
             <span className="font-medium text-sm text-white leading-4 whitespace-pre-line">
               {t('reservation.verticalText')
@@ -94,14 +97,13 @@ const StayCTAbutton = () => {
             </span>
           ) : (
             <span
-              className="font-medium text-sm text-white leading-4 whitespace-nowrap inline-block"
               style={{
+                display: 'inline-block',
                 transform: 'rotate(90deg)',
-                transformOrigin: 'left top',
-                display: 'inline-flex', // これを追加して中央寄せしやすく
-                justifyContent: 'center',
-                width: 'max-content',
+                letterSpacing: '0.2em',
+                marginTop: '30px',
               }}
+              className="font-medium text-sm text-white leading-4"
             >
               {t('reservation.verticalText')}
             </span>
