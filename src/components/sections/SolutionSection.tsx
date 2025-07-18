@@ -49,7 +49,7 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          <p className="md:text-2xl text-xl text-gray-700 text-center font-medium leading-[2rem] sm:leading-[2.5rem]  whitespace-pre-line">
+          <p className="md:text-2xl text-xl text-gray-900 text-center leading-[2rem] sm:leading-[2.5rem] whitespace-pre-line">
             {t('cta')}
           </p>
         </div>
@@ -61,9 +61,9 @@ const SolutionSection = () => {
           <div className="relative w-full md:w-[70%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
               src="/assets/images/solution/001.png"
-              alt="アスパラ"
+              alt="アスパラ01"
               fill
-              style={{ objectFit: 'cover' }} // ← borderRadius は不要
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 70vw"
             />
           </div>
@@ -71,7 +71,7 @@ const SolutionSection = () => {
           <div className="relative w-full md:w-[30%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
               src="/assets/images/solution/002.webp"
-              alt="アスパラ"
+              alt="アスパラ02"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 30vw"
@@ -83,7 +83,7 @@ const SolutionSection = () => {
           <div className="relative w-full md:w-[30%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
               src="/assets/images/solution/003.webp"
-              alt="アスパラ"
+              alt="アスパラ03"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 30vw"
@@ -92,7 +92,7 @@ const SolutionSection = () => {
           <div className="relative w-full md:w-[70%] h-[200px] md:h-[300px] rounded shadow overflow-hidden">
             <Image
               src="/assets/images/solution/004.webp"
-              alt="アスパラ"
+              alt="アスパラ04"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 70vw"

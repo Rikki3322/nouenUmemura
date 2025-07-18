@@ -31,7 +31,10 @@
       "Single delivery: Mainly S/M sizes, but larger sizes may be included depending on the season.\n(Extra-thick L and up: Feb–mid-Mar, L size: mid-May–Jul)",
       "4 deliveries: A mix of M, L, 2L, and 3L sizes.",
       "The thickness and quantity of spears vary by harvest season.\n(Spring: thicker, fewer spears / Summer/Autumn: thinner, more spears)",
-      "Orders placed after October will be considered <span class='text-red-500'>reservations for next year’s shipment</span>."
+      {
+        "text": "Orders placed after October will be treated as ",
+        "emphasis": "reservations for next year’s shipment."
+      }
     ]
   },
   "cta": "Donate and receive asparagus",

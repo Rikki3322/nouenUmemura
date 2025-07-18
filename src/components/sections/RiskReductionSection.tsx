@@ -22,7 +22,7 @@ const RiskReductionSection = () => {
           <FadeInOnScroll>
             <div className="flex justify-center items-center gap-2 mb-8">
               <ShieldCheck className="text-green-600" size={24} />
-              <h2 className="text-3xl font-bold text-gray-900">{t('title')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900">{t('title')}</h2>
             </div>
           </FadeInOnScroll>
 

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useLocale,useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import {
   BookAlert,
@@ -95,9 +95,25 @@ const FurusatoPage = () => {
           {t('section5.title')}
         </h2>
         <ul className="list-disc list-inside ml-4 leading-relaxed">
-          {t.raw('section5.items').map((item: string, i: number) => (
-            <li key={i}>{item}</li>
-          ))}
+          {t
+            .raw('section5.items')
+            .map(
+              (
+                item: string | { text: string; emphasis: string },
+                i: number
+              ) => (
+                <li key={i}>
+                  {typeof item === 'string' ? (
+                    item
+                  ) : (
+                    <>
+                      {item.text}
+                      <span className="text-red-500">{item.emphasis}</span>
+                    </>
+                  )}
+                </li>
+              )
+            )}
         </ul>
       </div>
 

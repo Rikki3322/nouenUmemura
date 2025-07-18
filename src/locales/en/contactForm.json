@@ -29,9 +29,9 @@
     "placeholder": "e.g., Can I really eat it raw?"
   },
   "fields": {
-    "name": { "label": "Name", "placeholder": "e.g., Taro Imari" },
-    "kana": { "label": "Phonetic name", "placeholder": "e.g., imari taro" },
-    "email": { "label": "Email", "placeholder": "e.g., TaroImari@yahoo.com" },
+    "name": { "label": "Name", "placeholder": "e.g., John Smith" },
+    "kana": { "label": "Phonetic name", "placeholder": "e.g., John Smith" },
+    "email": { "label": "Email", "placeholder": "e.g., JohnSmith@yahoo.com" },
     "phone": { "label": "Phone", "placeholder": "e.g., 0955-23-0000" },
     "postal_code": {
       "label": "Postal code",

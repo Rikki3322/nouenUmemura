@@ -100,11 +100,11 @@ const AccessSection = () => {
               </h4>
               <div className="space-y-4">
                 {['within20', 'within30', 'within60', 'local'].map((key, i) => (
-                  <div key={i} className="flex items-start gap-2">
+                  <div key={i} className="flex items-start gap-3">
                     {key === 'local' ? (
-                      <FishSymbol className="text-amber-600 mt-1" size={24} />
+                      <FishSymbol className="text-amber-600 mt-1 w-8 h-8 sm:w-6 sm:h-6" />
                     ) : (
-                      <Car className="text-amber-600 mt-1" size={24} />
+                      <Car className="text-amber-600 mt-1 w-8 h-8 sm:w-6 sm:h-6" />
                     )}
                     <p className="text-gray-700">{t(`sightseeing.${key}`)}</p>
                   </div>
