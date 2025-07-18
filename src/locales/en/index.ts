@@ -11,6 +11,7 @@ import emotionalValue from './homepage/emotionalValue.json';
 import FAQSection from './homepage/FAQSection.json';
 import finalPushSection from './homepage/finalPushSection.json';
 import hero from './homepage/hero.json';
+import home from './homepage/home.json';
 import immediatePurchase from './homepage/immediatePurchase.json';
 import orderOptions from './homepage/orderOptions.json';
 import priceJustification from './homepage/priceJustification.json';
@@ -44,6 +45,7 @@ export default {
     FAQSection,
     finalPushSection,
     hero,
+    home,
     immediatePurchase,
     orderOptions,
     priceJustification,

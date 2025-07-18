@@ -10,10 +10,6 @@ const withIntl = withNextIntl(); // ✅ ここは空でOK
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  i18n: {
-    locales: ['ja', 'en'],
-    defaultLocale: 'ja',
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
