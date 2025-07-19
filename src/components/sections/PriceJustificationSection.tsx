@@ -87,10 +87,10 @@ const PriceJustificationSection = () => {
             {/* 右カラム：説明 */}
             <div className="bg-green-50 rounded p-6 leading-relaxed">
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-8 whitespace-pre-line">
                   {t('quality.title')}
                 </h3>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className="text-lg text-gray-700 mb-8 whitespace-pre-line">
                   {t('quality.subtitle')}
                 </p>
                 <p className="text-gray-700 mb-2 text-left whitespace-pre-line">
