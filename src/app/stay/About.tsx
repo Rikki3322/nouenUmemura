@@ -5,27 +5,24 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import FadeInOnScroll from '@/components/animations/FadeInOnScroll';
-import { Instagram } from '@/components/icons/lucide-icons';
 
 const AboutSection = () => {
   const t = useTranslations('stay.about');
 
-  // 方法1: unknown経由の型アサーション（推奨）
-  //const paragraphs = t('paragraphs', { returnObjects: true }) as unknown as string[];
+  // paragraphs.0 ～ paragraphs.4 までを順に取得し、存在するものだけ使う
+  const maxParagraphs = 4;
+  const paragraphs: string[] = [];
 
-  // 方法2: より安全な型ガード付きアプローチ（最も推奨）
-  // const rawParagraphs = t('paragraphs', { returnObjects: true });
-  // const paragraphs: string[] = Array.isArray(rawParagraphs)
-  //   ? rawParagraphs.filter((item): item is string => typeof item === 'string')
-  //   : [];
-
-  // 方法3: 個別にキーを指定してアクセス（最も型安全）
-  const paragraphs = [
-    t('paragraphs.0'),
-    t('paragraphs.1'),
-    t('paragraphs.2'),
-    // 必要な分だけ追加
-  ].filter(Boolean); // 空文字列や未定義を除外
+  for (let i = 0; i < maxParagraphs; i++) {
+    try {
+      const text = t(`paragraphs.${i}`);
+      if (text) {
+        paragraphs.push(text);
+      }
+    } catch {
+      break; // 存在しないキーに到達したら終了
+    }
+  }
 
   return (
     <section id="about" className="py-16 px-6 bg-gray-50">
@@ -40,6 +37,12 @@ const AboutSection = () => {
             <p className="text-xl text-gray-700 leading-relaxed">
               {t('subTitle')}
             </p>
+
+            {/* キャッチフレーズ */}
+            <div className="text-center text-lg md:text-xl text-gray-800 font-semibold my-4">
+              <p>{t('catchphrase1')}</p>
+              <p>{t('catchphrase2')}</p>
+            </div>
 
             <div className="text-base text-gray-600 leading-relaxed space-y-4">
               {paragraphs.map((text, i) => (
