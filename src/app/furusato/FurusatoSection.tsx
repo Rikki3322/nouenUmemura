@@ -99,7 +99,9 @@ const FurusatoPage = () => {
             .raw('section5.items')
             .map(
               (
-                item: string | { text: string; emphasis: string },
+                item:
+                  | string
+                  | { text: string; emphasis: string; textAfter?: string },
                 i: number
               ) => (
                 <li key={i}>
@@ -109,6 +111,7 @@ const FurusatoPage = () => {
                     <>
                       {item.text}
                       <span className="text-red-500">{item.emphasis}</span>
+                      {item.textAfter ?? null}
                     </>
                   )}
                 </li>
