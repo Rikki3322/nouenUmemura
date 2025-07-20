@@ -33,15 +33,15 @@ export const seasonalContents_ja: SeasonalContent[] = [
     season: 'summer',
     phase: 'harvest1',
     label: '夏芽 収穫期1（6〜7月）',
-    immediateTitle: '採れたて夏芽が、すぐにあなたの食卓へ',
-    scheduledTitle: '夏野菜に迷ったら。“朝採れ夏芽”をお好きな日に直送',
+    immediateTitle: '採れたて夏芽が、\nすぐにあなたの食卓へ',
+    scheduledTitle: '夏野菜に迷ったら — “朝採れ夏芽”をお好きな日に直送',
     subscriptionInfo:
       '夏こそ、野菜をもっとおいしく。朝採れ夏芽を定期便で食卓に',
     urgencyMainMessage: '夏芽アスパラ、鮮度抜群で出荷中！',
-    urgencySubMessage: '太物のピーク予想は、6月～7月中旬',
+    urgencySubMessage: '太物のピーク予想は、\n6月～7月中旬',
     finalPushMainMessage: '冷蔵庫に、夏のごちそうを',
     finalPushSubMessage:
-      'シャキシャキ夏芽アスパラを、あなたのお好きなタイミングで',
+      'シャキシャキ夏芽アスパラを、\nあなたのお好きなタイミングで',
   },
   {
     season: 'summer',

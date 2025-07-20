@@ -57,7 +57,7 @@ const UrgencySection: React.FC<UrgencySectionProps> = ({
             <FadeInOnScroll>
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Gift className="text-red-600" size={24} />
-                <h2 className="text-2xl font-bold text-red-600">
+                <h2 className="text-2xl font-bold text-red-600 sm:whitespace-normal whitespace-pre-line">
                   {content.immediateTitle}
                 </h2>
               </div>
@@ -69,7 +69,7 @@ const UrgencySection: React.FC<UrgencySectionProps> = ({
               </p>
 
               <div className="bg-white rounded-lg p-4 border border-red-100">
-                <p className="text-xl text-gray-900 font-semibold text-center">
+                <p className="text-xl text-gray-900 font-semibold text-center sm:whitespace-normal whitespace-pre-line">
                   {content.urgencySubMessage}
                 </p>
               </div>

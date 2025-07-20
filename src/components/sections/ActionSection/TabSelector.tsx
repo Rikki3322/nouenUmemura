@@ -23,7 +23,7 @@ const TabSelector = ({ activeTab, onTabChange }: TabSelectorProps) => {
 
   return (
     <div className="mb-8 flex justify-center">
-      <div className="flex rounded-lg bg-white p-1 shadow-sm">
+      <div className="flex rounded-lg bg-white p-1 shadow-sm sm:whitespace-normal whitespace-pre-line">
         {tabs.map((tab) => (
           <Button
             key={tab.key}

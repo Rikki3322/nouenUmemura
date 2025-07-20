@@ -46,7 +46,7 @@ const ValueProofSection = () => {
                 {t('awards.title')}
               </h3>
             </div>
-            <div className="space-y-2 text-center">
+            <div className="space-y-2 text-center  sm:whitespace-normal whitespace-pre-line">
               <p className="text-gray-700">{t('awards.line1')}</p>
               <p className="text-gray-700">{t('awards.line2')}</p>
               <p className="text-gray-700">{t('awards.line3')}</p>

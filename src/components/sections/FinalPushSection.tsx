@@ -36,7 +36,7 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
                 </h2>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-center items-center gap-2 text-center">
+                <div className="flex justify-center items-center gap-2 text-center sm:whitespace-normal whitespace-pre-line">
                   <p className="text-gray-900">
                     {content.finalPushSubMessage || t('defaultSub')}
                   </p>
