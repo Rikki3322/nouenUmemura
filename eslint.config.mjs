@@ -31,19 +31,16 @@ export default defineConfig([
     settings: {
       react: { version: 'detect' },
       'import/resolver': {
-        typescript: {},
+        typescript: {}, // tsconfig の paths に対応
       },
     },
     rules: {
-      // React 推奨ルールを展開
-      // ...tseslint.configs.recommended,
-
+      // React ルール
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-
-      // unknown-property は1回だけ定義し、jsx と global を両方許可
       'react/no-unknown-property': ['error', { ignore: ['jsx', 'global'] }],
 
+      // スタイル系
       'prefer-arrow-callback': 'error',
       'func-style': ['error', 'expression'],
       'arrow-body-style': ['error', 'as-needed'],
@@ -53,24 +50,10 @@ export default defineConfig([
         { avoidEscape: true, allowTemplateLiterals: true },
       ],
 
-      // import順序
+      // import 並び順（simple-import-sort を優先）
       'simple-import-sort/imports': 'warn',
       'simple-import-sort/exports': 'warn',
-      'import/order': [
-        'warn',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index'],
-            'object',
-            'type',
-          ],
-          'newlines-between': 'always',
-          alphabetize: { order: 'asc', caseInsensitive: true },
-        },
-      ],
+      'import/order': 'off', // 重複回避のため無効化
     },
   },
 ]);

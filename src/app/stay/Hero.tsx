@@ -13,7 +13,7 @@ const HeroSection = () => {
     <section id="hero" className="bg-white mb-10">
       <div className="max-w-screen-lg mx-auto px-4 flex flex-col md:flex-row items-center md:items-stretch gap-2">
         {/* 左側：画像（2/3幅） */}
-        <div className="w-full md:w-1/2 h-[80vh] max-h-[600px] relative overflow-hidden rounded-lg">
+        <div className="w-full md:w-1/2 h-[90vh] max-h-[600px] relative overflow-hidden rounded-lg">
           <Image
             src="/assets/images/stay/hero2.webp"
             alt={t('imageAlt')}

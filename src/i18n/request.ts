@@ -1,5 +1,5 @@
-import path from 'path';
 import { getRequestConfig } from 'next-intl/server';
+import path from 'path';
 
 export default getRequestConfig(async ({ locale }) => {
   const fallbackLocale = 'ja';
