@@ -25,6 +25,7 @@ const PriceJustificationSection = () => {
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 {t('title.line1')}
+                <br />
                 <span className="text-green-600">{t('title.highlight')}</span>
                 <br />
                 {t('title.line2')}
