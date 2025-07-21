@@ -31,12 +31,12 @@ const FinalPushSection: React.FC<FinalPushSectionProps> = ({
             <div className="bg-red-50 rounded p-6">
               <div className="flex justify-center items-center gap-3 mb-4 text-center">
                 <Gift className="text-red-600" size={24} />
-                <h2 className="sm:text-2xl text-xl font-bold text-red-600">
+                <h2 className="sm:text-2xl text-xl font-bold text-red-600 sm:whitespace-normal whitespace-pre-line">
                   {content.finalPushMainMessage || t('defaultMain')}
                 </h2>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-center items-center gap-2 text-center sm:whitespace-normal whitespace-pre-line">
+                <div className="flex justify-center items-center gap-2 text-center">
                   <p className="text-gray-900">
                     {content.finalPushSubMessage || t('defaultSub')}
                   </p>
