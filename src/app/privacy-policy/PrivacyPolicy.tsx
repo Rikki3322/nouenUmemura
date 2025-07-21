@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLocale,useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
@@ -59,11 +59,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-xl font-semibold mb-2">
           {t('sections.businessInfo.title')}
         </h2>
-        <p>
-          {t.rich('sections.businessInfo.body', {
-            br: () => <br />,
-          })}
-        </p>
+        <p className="whitespace-pre-line">{t('sections.businessInfo.body')}</p>
       </section>
 
       <section className="mb-20 text-base leading-8">
